@@ -28,9 +28,7 @@ This project is licensed under MIT.
 
 - Software
     - [Python 3.x](https://www.python.org/downloads/)
-    - Gzip & wget(recommended) / curl
-        - For Windows OS use [Git For Windows](https://git-scm.com/download/win)
-    - [PostgreSQL 13](https://www.postgresql.org/download/) - [Direct Download](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads)
+    - Python, Pytorch, nltk, scipy, ujson, pytorch ignite 0.1.2, sacred
 
 
 ## Process
@@ -61,6 +59,6 @@ This project is licensed under MIT.
 ## References
 
 1. [DBLP](https://dblp.org/rec/conf/msr/RodriguesAFD20.html?view=bibtex)
-2. https://2020.msrconf.org/details/msr-2020-mining-challenge/3/Exploring-the-Security-Awareness-of-the-Python-and-JavaScript-Open-Source-Communities
+2. https://2020.msrconf.org/details/msr-2020-papers/31/A-Soft-Alignment-Model-for-Bug-Deduplication
 3. [Dataset](https://zenodo.org/record/3922012#.YBUloehKhnI)
 4. [Code](https://github.com/irving-muller/soft_alignment_model_bug_deduplication)
