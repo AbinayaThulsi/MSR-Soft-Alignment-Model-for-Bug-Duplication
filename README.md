@@ -5,9 +5,9 @@ This is a reproduction project of paper - "A Soft Alignment Model for Bug Dedupl
 
 A reproduction of a following Mining Software Repository(MSR) research paper as part of the MSR course 2020/21 at UniKo, CS department, SoftLang Team:  
 
-"Exploring the Security Awareness of the Python and JavaScript Open Source Communities"[1][2] by Gábor Antal, Márton Keleti & Péter Hegedűs.
+"A Soft Alignment Model for Bug Deduplication"[1] by Irving Muller Rodrigues, Daniel Aloise, Eraldo Rezende Fernandes and Michel Dagenais.
 
-The Code[7] & Dataset[4][5] were licensed as [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode) by research paper authors.
+The Code[4] & Dataset[3] were licensed by research paper authors.
 
 This project is licensed under the [GNU GPLv3](LICENSE.md).
 
@@ -61,10 +61,6 @@ This project is licensed under the [GNU GPLv3](LICENSE.md).
 ## References
 
 1. [DBLP](https://dblp.org/rec/conf/msr/RodriguesAFD20.html?view=bibtex)
-2. [arXiv:2006.13652 [cs.SE]](https://arxiv.org/abs/2006.13652)
-3. https://2020.msrconf.org/details/msr-2020-mining-challenge/3/Exploring-the-Security-Awareness-of-the-Python-and-JavaScript-Open-Source-Communities
-4. [Software Heritage Graph Dataset](https://annex.softwareheritage.org/public/dataset/)
-5. [Software Heritage Graph Dataset](https://zenodo.org/record/2583978)
-6. [Software Heritage Graph Dataset Documentation](https://docs.softwareheritage.org/devel/swh-dataset/graph/dataset.html)
-7. [Code](https://zenodo.org/record/3699486)
-8. [CVE manager](https://github.com/aatlasis/cve_manager)
+2. https://2020.msrconf.org/details/msr-2020-mining-challenge/3/Exploring-the-Security-Awareness-of-the-Python-and-JavaScript-Open-Source-Communities
+3. [Dataset](https://zenodo.org/record/3922012#.YBUloehKhnI)
+4. [Code](https://github.com/irving-muller/soft_alignment_model_bug_deduplication)
