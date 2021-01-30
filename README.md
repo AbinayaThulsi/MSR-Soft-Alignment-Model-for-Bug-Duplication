@@ -60,7 +60,7 @@ This project is licensed under the [GNU GPLv3](LICENSE.md).
 
 ## References
 
-1. [DBLP:conf/msr/AntalKH20](https://dblp.org/rec/conf/msr/AntalKH20.html?view=bibtex)
+1. [DBLP](https://dblp.org/rec/conf/msr/RodriguesAFD20.html?view=bibtex)
 2. [arXiv:2006.13652 [cs.SE]](https://arxiv.org/abs/2006.13652)
 3. https://2020.msrconf.org/details/msr-2020-mining-challenge/3/Exploring-the-Security-Awareness-of-the-Python-and-JavaScript-Open-Source-Communities
 4. [Software Heritage Graph Dataset](https://annex.softwareheritage.org/public/dataset/)
