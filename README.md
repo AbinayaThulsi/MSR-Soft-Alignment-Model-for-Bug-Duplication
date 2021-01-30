@@ -3,8 +3,7 @@ This is a reproduction project of paper - "A Soft Alignment Model for Bug Dedupl
 
 ##  Metadata 
 
-A reproduction of a following Mining Software Repository(MSR) research paper as part of the MSR course 2020/21 at UniKo, CS department, SoftLang Team:  
-"A Soft Alignment Model for Bug Deduplication"[1][2] by Irving Muller Rodrigues, Daniel Aloise, Eraldo Rezende Fernandes and Michel Dagenais. The Code[4] & Dataset[3] were licensed by research paper authors.This project is licensed under MIT.
+A reproduction of a following Mining Software Repository(MSR) research paper as part of the MSR course 2020/21 at UniKo, CS department, SoftLang Team: "A Soft Alignment Model for Bug Deduplication"[1][2] by Irving Muller Rodrigues, Daniel Aloise, Eraldo Rezende Fernandes and Michel Dagenais. The Code[4] & Dataset[3] were licensed by research paper authors.This project is licensed under MIT.
 
 ## Requirements 
 
