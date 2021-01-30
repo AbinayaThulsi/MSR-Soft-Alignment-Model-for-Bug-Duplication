@@ -9,7 +9,7 @@ A reproduction of a following Mining Software Repository(MSR) research paper as 
 
 The Code[4] & Dataset[3] were licensed by research paper authors.
 
-This project is licensed under the [GNU GPLv3](LICENSE.md).
+This project is licensed under MIT.
 
 ## Requirements 
 
