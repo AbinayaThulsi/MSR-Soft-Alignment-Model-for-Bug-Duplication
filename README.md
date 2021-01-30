@@ -93,7 +93,7 @@ The original dataset is available [here](http://alazar.people.ysu.edu/msr14data/
 > Note: Lazar's dataset has to be dumped into mongo before running these commands
 
 
-## Preprocess
+## Data Preprocessing
 ```bash    
 # Eclipse
 python3 data/create_dataset_our_methodology.py --database eclipse --collection initial --bug_data DATASET_DIR/eclipse_2001-2007_2008/eclipse_initial.json --training  DATASET_DIR/eclipse_2001-2007_2008/training_split_eclipse.txt --validation  DATASET_DIR/eclipse_2001-2007_2008/validation_eclipse.txt --test DATASET_DIR/eclipse_2001-2007_2008/test_eclipse.txt --date="2008/01/01" --date_threshold="2008/12/31" --no_tree --dev_perc=0.05
@@ -148,20 +148,24 @@ python3 experiments/sabd.py -F HOME_DIR/experiments with HOME_DIR/duplicate-bug-
 
 ## Delta
 
-# Process delta: 
+# Process Delta: 
 ```bash
 1.We were able to fetch the data using the commands provided with few minor changes in the code(like changing the path). 
 2.And preprocess also worked fine (cleaning data, creating pairs etc). 
 3.During analysis sabd.py program was modified to run for the cpu instead of gpu. As we did not have the version of gpu needed to run the code for the dataset provided.
 ```
-# Data delta:
+# Data Delta:
 ```bash
-1. As the data was pretty big when we ran without gpu the code ran for 20 hours without any output. So we manually took the sample of data for one of the open source(eclipse) and preprocessed data using clean_data ,generate_pairs_triplets, generate_categorical_lexicon. 
+1. As the data was pretty big when we ran without gpu the code ran for 20 hours without any output.
+So we manually took the sample of data for one of the open source(eclipse) and preprocessed data using clean_data,
+generate_pairs_triplets, generate_categorical_lexicon. 
 2. We ran the sabd.py code for 1 year and 3 years window and we got the final output. i.e, ranking rate for k 1 to 20.
 3. Since we could only run for sample data we could not compare the results with other open sources or with other methodologies. 
-4. The code article_results.ipynb gives the comparison for all open sources and other methodologies. All the ranking rates were fetched as a list in article_results.ipynb code. These ranking rates were fetched by the author of the paper. As mentioned in 3rd point we were not able to compare because of GPU constraint we had.
+4. The code article_results.ipynb gives the comparison for all open sources and other methodologies. All the ranking rates were 
+fetched as a list in article_results.ipynb code. These ranking rates were fetched by the author of the paper. As mentioned 
+in 3rd point we were not able to compare because of GPU constraint we had.
 ```
-## Problems faced
+## Problems Faced
 ```bash
 1. During data fetch we did not face much issues, just the minor changes were done. Also preprocess went smoothly.
 2. The major issue was while running sabd.py which took us 4 days to figure out the complete issue with many compatibility issues and version issue. Finally we started getting GPU issue (Error: No HIP GPU available) which we resolved by downloading drivers but the versions were not matching so NVIDIA failed to communicate with the driver(Error : No Nvidia driver in your system).
