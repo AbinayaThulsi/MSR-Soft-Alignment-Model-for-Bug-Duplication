@@ -1,5 +1,5 @@
 # MSR-Soft-Alignment-Model-for-Bug-Duplication
-A reproduction of research paper focusing on security perception of Python & JS open source communities.
+This is a reproduction project of paper - "A Soft Alignment Model for Bug Deduplication". The paper aims at the state-of-art development of a novel soft alignment method which helps to identify the distinct bug reports for the same bug registered by multiple users. A novel deep learning model named SABD is implemented to achieve this. Further, the results are evaluated based on the rank-based metric.
 
 ##  Metadata 
 
