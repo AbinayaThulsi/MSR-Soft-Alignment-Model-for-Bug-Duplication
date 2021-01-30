@@ -5,7 +5,7 @@ This is a reproduction project of paper - "A Soft Alignment Model for Bug Dedupl
 
 A reproduction of a following Mining Software Repository(MSR) research paper as part of the MSR course 2020/21 at UniKo, CS department, SoftLang Team:  
 
-"A Soft Alignment Model for Bug Deduplication"[1] by Irving Muller Rodrigues, Daniel Aloise, Eraldo Rezende Fernandes and Michel Dagenais.
+"A Soft Alignment Model for Bug Deduplication"[1][2] by Irving Muller Rodrigues, Daniel Aloise, Eraldo Rezende Fernandes and Michel Dagenais.
 
 The Code[4] & Dataset[3] were licensed by research paper authors.
 
@@ -27,7 +27,6 @@ This project is licensed under MIT.
         - **Storage**: 70 GB **SSD** space
 
 - Software
-    - [Python 3.x](https://www.python.org/downloads/)
     - Python, Pytorch, nltk, scipy, ujson, pytorch ignite 0.1.2, sacred
 
 
