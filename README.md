@@ -33,8 +33,6 @@ This project is licensed under MIT.
 
 ## DATA
 
-## Install
-
 Install the following packages:
 
 ```bash
@@ -138,14 +136,12 @@ In order to train SABD, a json have to be created with the argument values of SA
 
 Run python script experiments/sabd.py to perform the experiments.
 
-
-```
 #Examples
 python3 experiments/sabd.py -F HOME_DIR/experiments with HOME_DIR/duplicate-bug-report/json_parameters/sabd_eclipse_test.json "recall_rate.window=365"
 python3 experiments/sabd.py -F HOME_DIR/experiments with HOME_DIR/duplicate-bug-report/json_parameters/sabd_open_office_test.json "recall_rate.window=365"
 python3 experiments/sabd.py -F HOME_DIR/experiments with HOME_DIR/duplicate-bug-report/json_parameters/sabd_netbeans_test.json "recall_rate.window=365"
 python3 experiments/sabd.py -F HOME_DIR/experiments with HOME_DIR/duplicate-bug-report/json_parameters/sabd_mozilla_test.json "recall_rate.window=365"
-```
+
 
 
 ## Delta
