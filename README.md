@@ -36,9 +36,10 @@ This project is licensed under MIT.
 ## Install
 Install the following packages:
 
-# CPU
+```bash
+#CPU
 conda install pytorch torchvision cpuonly -c pytorch 
-# GPU
+#GPU
 conda install pytorch torchvision cudatoolkit=10.1 -c pytorch
 
 conda install -c anaconda nltk
@@ -47,6 +48,7 @@ conda install -c anaconda ujson
 conda install -c pytorch ignite=0.4.2
 pip install sacred 
 conda install ignite -c pytorch
+```
 
 
 ## Data fetch
@@ -91,7 +93,7 @@ The original dataset is available [here](http://alazar.people.ysu.edu/msr14data/
 
 
 ## Preprocess
-    
+```bash    
 # Eclipse
 python3 data/create_dataset_our_methodology.py --database eclipse --collection initial --bug_data DATASET_DIR/eclipse_2001-2007_2008/eclipse_initial.json --training  DATASET_DIR/eclipse_2001-2007_2008/training_split_eclipse.txt --validation  DATASET_DIR/eclipse_2001-2007_2008/validation_eclipse.txt --test DATASET_DIR/eclipse_2001-2007_2008/test_eclipse.txt --date="2008/01/01" --date_threshold="2008/12/31" --no_tree --dev_perc=0.05
 
@@ -125,7 +127,7 @@ python3 data/clean_data.py --bug_dataset DATASET_DIR/netbeans_2001-2007_2008/net
 python3 data/create_dataset_our_methodology.py --database openOffice --collection ooall --bug_data DATASET_DIR/open_office_2001-2008_2010/open_office_initial.json --training  DATASET_DIR/open_office_2001-2008_2010/training_split_open_office.txt --validation  DATASET_DIR/open_office_2001-2008_2010/validation_open_office.txt --test DATASET_DIR/open_office_2001-2008_2010/test_open_office.txt --date="2008/01/01" --date_threshold="2010/12/31" --no_tree --dev_perc=0.05
 
 python3 data/clean_data.py --bug_dataset DATASET_DIR/open_office_2001-2008_2010/open_office_initial.json --output DATASET_DIR/open_office_2001-2008_2010/open_office_soft_clean_rm_punc_sent_tok.txt.json --fields short_desc description --type soft --rm_punc --sent_tok --lower_case
-
+```
 
 
     
@@ -134,13 +136,13 @@ python3 data/clean_data.py --bug_dataset DATASET_DIR/open_office_2001-2008_2010/
 In order to train SABD, a json have to be created with the argument values of SABD. 
 
 Run python script experiments/sabd.py to perform the experiments.
-
+```bash
 # Examples
 python3 experiments/sabd.py -F HOME_DIR/experiments with HOME_DIR/duplicate-bug-report/json_parameters/sabd_eclipse_test.json "recall_rate.window=365"
 python3 experiments/sabd.py -F HOME_DIR/experiments with HOME_DIR/duplicate-bug-report/json_parameters/sabd_open_office_test.json "recall_rate.window=365"
 python3 experiments/sabd.py -F HOME_DIR/experiments with HOME_DIR/duplicate-bug-report/json_parameters/sabd_netbeans_test.json "recall_rate.window=365"
 python3 experiments/sabd.py -F HOME_DIR/experiments with HOME_DIR/duplicate-bug-report/json_parameters/sabd_mozilla_test.json "recall_rate.window=365"
-
+```
 
 
 ## Delta
