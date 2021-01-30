@@ -61,6 +61,7 @@ contain the dataset of the open-sources projects (Eclipse, Netbeans, Open Office
 This data came from the [Lazar's work](https://dl.acm.org/doi/abs/10.1145/2597073.2597128  ).
 The original dataset is available [here](http://alazar.people.ysu.edu/msr14data/ ).
 
+```bash
  wget http://alazar.people.ysu.edu/msr14data/datasets/eclipse.tar.gz
  tar zxvf eclipse.tar.gz
  mongorestore
@@ -86,7 +87,7 @@ The original dataset is available [here](http://alazar.people.ysu.edu/msr14data/
  mongorestore
  mongo netBeans
  show collections
- 
+``` 
 
 *The commands below generates the dataset of each open-sources projects:*
 > Note: Lazar's dataset has to be dumped into mongo before running these commands
