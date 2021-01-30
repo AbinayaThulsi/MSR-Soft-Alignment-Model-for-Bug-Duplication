@@ -33,9 +33,9 @@ This project is licensed under MIT.
 
 ## DATA
 
+## Install
 Install the following packages:
 
-```bash
 # CPU
 conda install pytorch torchvision cpuonly -c pytorch 
 # GPU
@@ -49,7 +49,7 @@ pip install sacred
 conda install ignite -c pytorch
 
 
-##Data fetch
+## Data fetch
 The sample of the data is present in data/HOME_DIR folder. The complete data can be found in the link (https://zenodo.org/record/3922012#.YBUloehKhnI) .
 
 But below is the process to fetch the data :
@@ -89,16 +89,15 @@ The original dataset is available [here](http://alazar.people.ysu.edu/msr14data/
 *The commands below generates the dataset of each open-sources projects:*
 > Note: Lazar's dataset has to be dumped into mongo before running these commands
 
-================================
 
-##Preprocess
+## Preprocess
     
-#Eclipse
+# Eclipse
 python3 data/create_dataset_our_methodology.py --database eclipse --collection initial --bug_data DATASET_DIR/eclipse_2001-2007_2008/eclipse_initial.json --training  DATASET_DIR/eclipse_2001-2007_2008/training_split_eclipse.txt --validation  DATASET_DIR/eclipse_2001-2007_2008/validation_eclipse.txt --test DATASET_DIR/eclipse_2001-2007_2008/test_eclipse.txt --date="2008/01/01" --date_threshold="2008/12/31" --no_tree --dev_perc=0.05
 
 python3 data/clean_data.py --bug_dataset DATASET_DIR/eclipse_2001-2007_2008/eclipse_initial.json --output DATASET_DIR/eclipse_2001-2007_2008/eclipse_soft_clean_rm_punc_sent_tok.txt.json --fields short_desc description --type soft --rm_punc --sent_tok --lower_case
 
-#example to generate pairs and triplets
+# example to generate pairs and triplets
 python data/generate_pairs_triplets.py --bug_data DATASET_DIR/eclipse_2001-2007_2008/eclipse_initial.json --dataset DATASET_DIR/eclipse_2001-2007_2008/validation_eclipse.txt --n 1 --type random
 
 python data/generate_pairs_triplets.py --bug_data DATASET_DIR/eclipse_2001-2007_2008/eclipse_initial.json --dataset DATASET_DIR/eclipse_2001-2007_2008/test_eclipse.txt --n 1 --type random
@@ -107,7 +106,7 @@ python data/generate_pairs_triplets.py --bug_data DATASET_DIR/eclipse_2001-2007_
 
 python data/generate_pairs_triplets.py --bug_data DATASET_DIR/eclipse_2001-2007_2008/eclipse_initial.json --dataset DATASET_DIR/eclipse_2001-2007_2008/training_split_eclipse.txt --n 1 --type random
 
-#example to create categorical_lexicons
+# example to create categorical_lexicons
 python data/generate_categorical_lexicon.py --bug_data DATASET_DIR/eclipse_2001-2007_2008/eclipse_initial.json -o DATASET_DIR/dataset/sun_2011/eclipse_2001-2007_2008/categorical_lexicons.json
 
 
@@ -116,17 +115,17 @@ python3 data/create_dataset_our_methodology.py --database mozilla --collection i
 
 python3 data/clean_data.py --bug_dataset DATASET_DIR/mozilla_2001-2009_2010/mozilla_initial.json --output DATASET_DIR/mozilla_2001-2009_2010/mozilla_soft_clean_rm_punc_sent_tok.txt.json --fields short_desc description --type soft --rm_punc --sent_tok --lower_case
 
-#Netbeans
+# Netbeans
 python3 data/create_dataset_our_methodology.py --database netBeans --collection netall --bug_data DATASET_DIR/netbeans_2001-2007_2008/netbeans_initial.json --training  DATASET_DIR/netbeans_2001-2007_2008/training_split_netbeans.txt --validation  DATASET_DIR/netbeans_2001-2007_2008/validation_netbeans.txt --test DATASET_DIR/netbeans_2001-2007_2008/test_netbeans.txt --date="2008/01/01" --date_threshold="2008/12/31" --no_tree --dev_perc=0.05
 
 python3 data/clean_data.py --bug_dataset DATASET_DIR/netbeans_2001-2007_2008/netbeans_initial.json --output DATASET_DIR/netbeans_2001-2007_2008/netbeans_soft_clean_rm_punc_sent_tok.txt.json --fields short_desc description --type soft --rm_punc --sent_tok --lower_case
 
 
-#OpenOffice
+# OpenOffice
 python3 data/create_dataset_our_methodology.py --database openOffice --collection ooall --bug_data DATASET_DIR/open_office_2001-2008_2010/open_office_initial.json --training  DATASET_DIR/open_office_2001-2008_2010/training_split_open_office.txt --validation  DATASET_DIR/open_office_2001-2008_2010/validation_open_office.txt --test DATASET_DIR/open_office_2001-2008_2010/test_open_office.txt --date="2008/01/01" --date_threshold="2010/12/31" --no_tree --dev_perc=0.05
 
 python3 data/clean_data.py --bug_dataset DATASET_DIR/open_office_2001-2008_2010/open_office_initial.json --output DATASET_DIR/open_office_2001-2008_2010/open_office_soft_clean_rm_punc_sent_tok.txt.json --fields short_desc description --type soft --rm_punc --sent_tok --lower_case
-==========================
+
 
 
     
@@ -136,7 +135,7 @@ In order to train SABD, a json have to be created with the argument values of SA
 
 Run python script experiments/sabd.py to perform the experiments.
 
-#Examples
+# Examples
 python3 experiments/sabd.py -F HOME_DIR/experiments with HOME_DIR/duplicate-bug-report/json_parameters/sabd_eclipse_test.json "recall_rate.window=365"
 python3 experiments/sabd.py -F HOME_DIR/experiments with HOME_DIR/duplicate-bug-report/json_parameters/sabd_open_office_test.json "recall_rate.window=365"
 python3 experiments/sabd.py -F HOME_DIR/experiments with HOME_DIR/duplicate-bug-report/json_parameters/sabd_netbeans_test.json "recall_rate.window=365"
@@ -157,7 +156,7 @@ python3 experiments/sabd.py -F HOME_DIR/experiments with HOME_DIR/duplicate-bug-
 3. Since we could only run for sample data we could not compare the results with other open sources or with other methodologies. 
 4. The code article_results.ipynb gives the comparison for all open sources and other methodologies. All the ranking rates were fetched as a list in article_results.ipynb code. This ranking rates were fetched by the author of the paper. As mentioned in 3rd point we were not able to compare because of the time constraint and GPU issue we had.
 
-##Problems faced
+## Problems faced
 1. During data fetch we did not face much issues, just the minor changes were done. Also preprocess went smoothly.
 2. The major issue was while running sabd.py which took us 4 days to figure out the complete issue with many compatibility issues and version issue. Finally we started getting GPU issue (Error: No HIP GPU available) which we resolved by downloading drivers but the versions were not matching so NVIDIA failed to communicate with the driver(Error : No Nvidia driver in your system).
 3. To overcome GPU issue we tried to run the code with only CPU but after running for 20 hours the code was running for epoch:1
