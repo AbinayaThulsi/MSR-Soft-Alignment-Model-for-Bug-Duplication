@@ -25,7 +25,7 @@ A reproduction of a following Mining Software Repository(MSR) research paper as 
 
 
 
-## DATA
+## Data
 
 ## Install
 Install the following packages:
@@ -45,7 +45,7 @@ conda install ignite -c pytorch
 ```
 
 
-## Data fetch
+## Data Fetching
 The sample of the data is present in data/HOME_DIR folder. The complete data can be found [here](https://zenodo.org/record/3922012#.YBUloehKhnI) .
 
 But the data can also be fetched by the below process:
@@ -142,14 +142,15 @@ python3 experiments/sabd.py -F HOME_DIR/experiments with HOME_DIR/duplicate-bug-
 
 ## Delta
 
-# Process Delta: 
+## Process Delta: 
 ```bash
-1. We were able to fetch the data using the commands provided with few minor changes in the code(e.g.Changing the path). 
+1. We were able to fetch the data using the commands provided with few minor changes in the code
+(e.g.Changing the path). 
 2. Data preprocessing also worked fine (cleaning data, creating pairs etc). 
 3. During analysis sabd.py program had to be modified to run for the CPU instead of GPU. As we did not 
 have the version of GPU needed to run the code for the dataset provided.
 ```
-# Data Delta:
+## Data Delta:
 ```bash
 1. When we ran the code with CPU instead if GPU, the code ran for about 20 hours without any others as the 
 size of dataset was huge. So we manually took the sample of data for one of the open source (eclipse) and 
@@ -160,9 +161,10 @@ for k 1 to 20.
 other methodologies. 
 4. The code article_results.ipynb gives the comparison for all open sources and other methodologies. These 
 ranking rates were fetched by the author of the paper. All the ranking rates were fetched as a list in 
-article_results.ipynb code. As mentioned in 3rd point we were not able to compare because of the GPU constraint.
+article_results.ipynb code. As mentioned in 3rd point we were not able to compare because of the GPU 
+constraint.
 ```
-## Problems Faced
+## Problems Faced:
 ```bash
 1. During data fetch phrase we did not face much issues, MongoDB was required and a few minor changes had 
 to be done. Data preprocessing went smoothly.
