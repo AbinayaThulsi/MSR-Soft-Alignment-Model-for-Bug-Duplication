@@ -43,6 +43,10 @@ conda install -c pytorch ignite=0.4.2
 pip install sacred 
 conda install ignite -c pytorch
 ```
+Otherwise, run the below command to install all the Packages.
+```bash
+pip install -r requirements.txt
+```
 
 
 ## Data Fetching
@@ -164,7 +168,7 @@ ranking rates were fetched by the author of the paper. All the ranking rates wer
 article_results.ipynb code. As mentioned in 3rd point we were not able to compare because of the GPU 
 constraint.
 ```
-## Problems Faced:
+## Executability:
 ```bash
 1. During data fetch phrase we did not face much issues, MongoDB was required and a few minor changes had 
 to be done. Data preprocessing went smoothly.
