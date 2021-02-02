@@ -149,7 +149,7 @@ python3 experiments/sabd.py -F HOME_DIR/experiments with HOME_DIR/duplicate-bug-
 ## Process Delta: 
 ```bash
 1. We were able to fetch the data using the commands provided with few minor changes in the code
-(e.g.Changing the path). 
+(e.g.Changing the path). The data was fetched to mongodb and then to local system.
 2. Data preprocessing also worked fine (cleaning data, creating pairs etc). 
 3. During analysis sabd.py program had to be modified to run for the CPU instead of GPU. As we did not 
 have the version of GPU needed to run the code for the dataset provided.
