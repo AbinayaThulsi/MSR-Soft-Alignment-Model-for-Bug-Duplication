@@ -216,7 +216,10 @@ def main(_run, _config, _seed, _log):
     paddingSym = "</s>"
     batchSize = args['batch_size']
 
-    device = torch.device('cuda' if args['cuda'] else "cpu")
+    #device = torch.device('cuda' if args['cuda'] else "cpu")
+    #Modified to get results without gpu
+    device = torch.device('cuda' if torch.cuda.is_available() else "cpu")
+
 
     if args['cuda']:
         logger.info("Turning CUDA on")
@@ -231,7 +234,9 @@ def main(_run, _config, _seed, _log):
     parametersToSave = dict([(parName, args[parName]) for parName in importantParameters])
 
     if args['load'] is not None:
-        mapLocation = (lambda storage, loc: storage.cuda()) if args['cuda'] else 'cpu'
+        #mapLocation = (lambda storage, loc: storage.cuda()) if args['cuda'] else 'cpu'
+        #Modified to get results without gpu
+        mapLocation = (lambda storage, loc: storage.cuda()) if torch.cuda.is_available() else 'cpu'
         modelInfo = torch.load(args['load'], map_location=mapLocation)
         modelState = modelInfo['model']
 
