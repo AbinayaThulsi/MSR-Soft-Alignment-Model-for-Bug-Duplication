@@ -94,6 +94,8 @@ The original dataset is available [here](http://alazar.people.ysu.edu/msr14data/
 
 ## Data Preprocessing
 
+> Note: The code has been completely automated for **Ecliple**. After running the command under eclipse, we can directly run the SABD code under **Usage**.
+
 ```bash    
 # Eclipse
 python3 data/create_dataset_our_methodology.py --database eclipse --collection initial --bug_data DATASET_DIR/eclipse_2001-2007_2008/eclipse_initial.json --training  DATASET_DIR/eclipse_2001-2007_2008/training_split_eclipse.txt --validation  DATASET_DIR/eclipse_2001-2007_2008/validation_eclipse.txt --test DATASET_DIR/eclipse_2001-2007_2008/test_eclipse.txt --date="2008/01/01" --date_threshold="2008/12/31" --no_tree --dev_perc=0.05
