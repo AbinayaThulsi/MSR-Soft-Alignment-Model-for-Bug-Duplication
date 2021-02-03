@@ -19,6 +19,7 @@ A reproduction of a following Mining Software Repository(MSR) research paper as 
         - **Processor**:  Intel Core i7-4790 4-Core 3.6GHz / AMD Ryzen 3 3200G
         - **Memory**: 8/16 GB RAM
         - **Storage**: 70 GB **SSD** space
+        - **GPU** : NVIDIA GPUs G8x version onwards
 
 - Software
     - Python, Pytorch, nltk, scipy, ujson, pytorch ignite 0.1.2, sacred, MongoDB
