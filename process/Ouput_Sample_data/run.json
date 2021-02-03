@@ -1,0 +1,118 @@
+{
+  "artifacts": [],
+  "command": "main",
+  "experiment": {
+    "base_dir": "/mnt/d/MSWDS/lectures/msr/final/process/data",
+    "dependencies": [
+      "ignite==1.1.0",
+      "nltk==3.5",
+      "numpy==1.19.2",
+      "sacred==0.8.2",
+      "torch==1.7.1"
+    ],
+    "mainfile": "sabd.py",
+    "name": "filter_model",
+    "repositories": [],
+    "sources": [
+      [
+        "Embedding.py",
+        "_sources/Embedding_a67b159f05c65c4eb7aa16093a059d69.py"
+      ],
+      [
+        "Lexicon.py",
+        "_sources/Lexicon_5ca12e13f439d359ac5324630ba118ef.py"
+      ],
+      [
+        "bug_dataset.py",
+        "_sources/bug_dataset_b983ae7b9542be82b67b574850cdc28e.py"
+      ],
+      [
+        "bug_report_database.py",
+        "_sources/bug_report_database_d526c43743d4b3511e90c46ea64646ad.py"
+      ],
+      [
+        "collate.py",
+        "_sources/collate_bf596508f3113b205fa72ae212053c2a.py"
+      ],
+      [
+        "dataset.py",
+        "_sources/dataset_45cce392b8dc6b85798615a3608c8353.py"
+      ],
+      [
+        "input_handler.py",
+        "_sources/input_handler_ba0aa258a36b6addd9844e7cb1e2483a.py"
+      ],
+      [
+        "jsontools.py",
+        "_sources/jsontools_f2ddde8e3dd9b960de2d9f8a6e70a18f.py"
+      ],
+      [
+        "preprocessing.py",
+        "_sources/preprocessing_5b6e3077bc8c0b196247618556b20cc0.py"
+      ],
+      [
+        "sabd.py",
+        "_sources/sabd_8bcbe542d3439e462d9de7005fff678e.py"
+      ],
+      [
+        "siamese_util.py",
+        "_sources/siamese_util_ffb409be81800e043f27f451d36f85fa.py"
+      ],
+      [
+        "torch_util.py",
+        "_sources/torch_util_c4e105d775749332873f615dae04423f.py"
+      ],
+      [
+        "training_loop_util.py",
+        "_sources/training_loop_util_dc47b239c436644e24c138428d96edb9.py"
+      ]
+    ]
+  },
+  "heartbeat": "2021-02-03T05:29:28.877773",
+  "host": {
+    "ENV": {},
+    "cpu": "Intel(R) Core(TM) i5-9300H CPU @ 2.40GHz",
+    "hostname": "LAPTOP-JTJ0P5AO",
+    "os": [
+      "Linux",
+      "Linux-4.4.0-18362-Microsoft-x86_64-with-glibc2.10"
+    ],
+    "python_version": "3.8.5"
+  },
+  "meta": {
+    "command": "main",
+    "options": {
+      "--beat-interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": "HOME_DIR/experiments",
+      "--force": false,
+      "--help": false,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print-config": false,
+      "--priority": null,
+      "--queue": false,
+      "--s3": null,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserved": false,
+      "COMMAND": null,
+      "UPDATE": [
+        "HOME_DIR/duplicate-bug-report/json_parameters/sabd_eclipse_test.json",
+        "recall_rate.window=365"
+      ],
+      "help": false,
+      "with": true
+    }
+  },
+  "resources": [],
+  "result": null,
+  "start_time": "2021-02-03T05:22:17.913716",
+  "status": "COMPLETED",
+  "stop_time": "2021-02-03T05:29:28.851008"
+}

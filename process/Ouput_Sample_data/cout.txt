@@ -1,0 +1,322 @@
+{"asctime": "2021-02-03 10:52:17", "levelname": "INFO", "message": "Running command 'main'"}
+{"asctime": "2021-02-03 10:52:18", "levelname": "INFO", "message": "Started run with ID \"2\""}
+{"asctime": "2021-02-03 10:52:18", "levelname": "INFO", "message": null, "bug_database": "HOME_DIR/dataset/sun_2011/eclipse_2001-2007_2008/eclipse_initial_soft_clean_rm_punc_sent_tok.json", "epochs": 12, "lr": 0.001, "l2": 0.0, "batch_size": 256, "ranking_batch_size": 512, "ranking_n_workers": 2, "cuda": true, "cache_folder": "HOME_DIR/scratch/temp/", "pairs_training": "HOME_DIR/dataset/sun_2011/eclipse_2001-2007_2008/training_eclipse_pairs_random_1.txt", "pairs_validation": "HOME_DIR/dataset/sun_2011/eclipse_2001-2007_2008/validation_eclipse_pairs_random_1.txt", "neg_pair_generator": {"type": "non_negative", "training": "HOME_DIR/dataset/sun_2011/eclipse_2001-2007_2008/training_eclipse.txt", "rate": 1, "pre_list_file": null, "k": 0, "n_tries": 15, "preselected_length": null, "random_anchor": true}, "loss": "bce", "margin": 0, "categorical": {"lexicons": "HOME_DIR/dataset/sun_2011/eclipse_2001-2007_2008/categorical_lexicons.json", "bn_last_layer": false, "emb_size": 20, "hidden_sizes": [40], "dropout": 0.0, "activation": "relu", "batch_normalization": false, "layer_norm": false}, "compare_aggregation": {"word_embedding": "HOME_DIR/embedding/glove_42b_300d_eclipse_2001-2007_2008_soft_clean_merged.npy", "norm_word_embedding": false, "lexicon": "HOME_DIR/embedding/glove_42b_300d_eclipse_2001-2007_2008_soft_clean_merged.lxc", "sent_representation": null, "tokenizer": "white_space", "bow": false, "frequency": false, "extractor": {"update_embedding": false, "filters": ["TransformLowerCaseFilter"], "hidden_size": 150, "dropout": 0.0, "layer_norm": false, "txt_field_emb_size": 5, "field_word_combination": "cat", "emb_dropout": 0.0, "scaled_attention": true, "model": "linear", "use_categorical": false, "bidirectional": true}, "matching": {"type": "full", "scaled_attention": true, "comparison_hidden_size": 100, "dropout": 0.0, "residual": true, "layer_norm": false, "attention_hidden_size": 200, "attention": "dot_product", "comparison_func": "submult+nn"}, "aggregate": {"model": "lstm", "window": [3, 4, 5], "nfilters": 100, "hidden_size": 150, "dropout": 0.0, "bidirectional": true, "num_layers": 1, "self_att_hidden": 50, "layer_norm": false, "n_hops": 20}, "classifier": {"hidden_size": [300], "output_act": "sigmoid", "hadamard_diff_textual": true, "hadamard_diff_categorical": true, "textual_hidden_layer": 600, "categorical_hidden_layer": 40, "categorical_dropout": 0.0, "dropout": 0.0, "only_candidate": false, "layer_norm": false, "batch_normalization": false}}, "random_switch": true, "recall_estimation_train": null, "recall_estimation": null, "sample_size_rr_tr": 0, "sample_size_rr_val": 0, "rr_val_epoch": 100, "rr_train_epoch": 100, "ranking_result_file": null, "optimizer": "adam", "lr_scheduler": null, "save": null, "save_by_epoch": null, "load": null, "recall_rate": {"type": "sun2011", "dataset": "HOME_DIR/dataset/sun_2011/eclipse_2001-2007_2008/test_eclipse.txt", "result_file": "HOME_DIR/ranking_results/cadd_eclipse_2001-2007_2008_test.txt", "group_by_master": true, "window": 365}, "pair_test_dataset": null, "rep": {"model": null, "input": null, "training": null, "rate": 1, "neg_training": 10000, "k": 1000}, "rr_scorer": "general", "seed": 108318683}
+{"asctime": "2021-02-03 10:52:18", "levelname": "INFO", "message": "It started at: 2021-02-03 10:52:18.083433"}
+{"asctime": "2021-02-03 10:52:18", "levelname": "INFO", "message": "Number of bugs with empty description: 0"}
+{"asctime": "2021-02-03 10:52:18", "levelname": "INFO", "message": "Turning CUDA on"}
+{"asctime": "2021-02-03 10:52:18", "levelname": "INFO", "message": "Using Categorical Information."}
+{"asctime": "2021-02-03 10:52:18", "levelname": "INFO", "message": "Field name and Lexicon size: product 12; bug_severity 7; component 25; priority 6; "}
+{"asctime": "2021-02-03 10:52:18", "levelname": "INFO", "message": "Categorical Encoder: emb_size=20"}
+{"asctime": "2021-02-03 10:52:18", "levelname": "INFO", "message": "Multilayer NN: activation=ReLU, batch_normalization=False, dropout_last_layer: 0.0"}
+{"asctime": "2021-02-03 10:52:18", "levelname": "INFO", "message": "==> Create Hidden Layer (80,40) in the encoder"}
+{"asctime": "2021-02-03 10:52:21", "levelname": "WARNING", "message": "The unknown symbol of the lexicon '' wasn't defined."}
+{"asctime": "2021-02-03 10:52:22", "levelname": "INFO", "message": "Lexicon size: 126813"}
+{"asctime": "2021-02-03 10:52:22", "levelname": "INFO", "message": "Word Embedding size: 300"}
+{"asctime": "2021-02-03 10:52:22", "levelname": "INFO", "message": "Use white space tokenizer to tokenize summary information"}
+{"asctime": "2021-02-03 10:52:22", "levelname": "INFO", "message": "BoW=False and TF=False"}
+{"asctime": "2021-02-03 10:52:22", "levelname": "INFO", "message": "Using Summary and Description information."}
+{"asctime": "2021-02-03 10:52:22", "levelname": "INFO", "message": "Cache: HOME_DIR/scratch/temp/9bb623f0341c1b2083e8cc3d8af2a4f3fcb386ef71114d67df018fb7fec0fd36.pkl file was found"}
+{"asctime": "2021-02-03 10:52:22", "levelname": "INFO", "message": "Loading cache"}
+{"asctime": "2021-02-03 10:52:22", "levelname": "INFO", "message": "Summary and Description: tokenizer class= WhitespaceTokenizer"}
+{"asctime": "2021-02-03 10:52:23", "levelname": "INFO", "message": "==> Field Word combination: CAT; field_size: 5"}
+{"asctime": "2021-02-03 10:52:23", "levelname": "INFO", "message": "==> Textual Encoder: use categorical data=False"}
+{"asctime": "2021-02-03 10:52:23", "levelname": "INFO", "message": "==> Textual Encoder: model=linear, input_size=305, output_size=305, use categorical data=False"}
+{"asctime": "2021-02-03 10:52:23", "levelname": "INFO", "message": "==> Encoder: Residual FC"}
+{"asctime": "2021-02-03 10:52:23", "levelname": "INFO", "message": "===> Compare: residual connection=True"}
+{"asctime": "2021-02-03 10:52:23", "levelname": "INFO", "message": "==> Full Matching"}
+{"asctime": "2021-02-03 10:52:23", "levelname": "INFO", "message": "===> Attention: dot_product. scale: 0.057259833431386825; hidden_size: 305"}
+{"asctime": "2021-02-03 10:52:23", "levelname": "INFO", "message": "===> Compare: SubMultiNN"}
+{"asctime": "2021-02-03 10:52:23", "levelname": "INFO", "message": "RNN Encoder: type=lstm, hiddenSize=150, numLayers=1, update_embedding=True, bidirectional=True, dropout0"}
+{"asctime": "2021-02-03 10:52:23", "levelname": "INFO", "message": "==> Aggregate: Sorted RNN lstm bi=True"}
+{"asctime": "2021-02-03 10:52:23", "levelname": "INFO", "message": "==> Classification: Categorical FC(160,40), hadamard_diff=True, dropout=0.0"}
+{"asctime": "2021-02-03 10:52:23", "levelname": "INFO", "message": "==> Classification: Textual FC(2400,600) hadamard_diff=True,dropout=0.0"}
+{"asctime": "2021-02-03 10:52:23", "levelname": "INFO", "message": "==> Only candidate embedding: False"}
+{"asctime": "2021-02-03 10:52:23", "levelname": "INFO", "message": "==> Create Hidden Layer (640,300) in the classifier"}
+{"asctime": "2021-02-03 10:52:23", "levelname": "INFO", "message": "Using BCE Loss: margin=0"}
+{"asctime": "2021-02-03 10:52:23", "levelname": "INFO", "message": "Non Negative Pair Generator"}
+{"asctime": "2021-02-03 10:52:23", "levelname": "INFO", "message": "Using the following dataset to generate negative examples: Training and Validation eclipse_2001-2007_2008. Number of bugs in the training: 502"}
+{"asctime": "2021-02-03 10:52:23", "levelname": "INFO", "message": "Using Pairs - Total=74, Num of Negative Pairs=37, Num of Positive Pairs=37, Randomly Invert Pair=True"}
+{"asctime": "2021-02-03 10:52:23", "levelname": "INFO", "message": "Training size: 74"}
+{"asctime": "2021-02-03 10:52:23", "levelname": "INFO", "message": "Using Pairs - Total=2, Num of Negative Pairs=1, Num of Positive Pairs=1, Randomly Invert Pair=False"}
+{"asctime": "2021-02-03 10:52:23", "levelname": "INFO", "message": "Validation size: 2"}
+{"asctime": "2021-02-03 10:52:23", "levelname": "INFO", "message": "Adam"}
+{"asctime": "2021-02-03 10:52:23", "levelname": "INFO", "message": "Scheduler: Constant"}
+{"asctime": "2021-02-03 10:52:23", "levelname": "INFO", "message": "Engine run starting with max_epochs=12."}
+{"asctime": "2021-02-03 10:52:23", "levelname": "INFO", "message": "Epoch: 1"}
+{"asctime": "2021-02-03 10:52:23", "levelname": "INFO", "message": "LR: 0.001"}
+{"asctime": "2021-02-03 10:52:51", "levelname": "INFO", "message": null, "type": "metric", "label": "value", "value": 0.0, "epoch": 1}
+{"asctime": "2021-02-03 10:52:51", "levelname": "INFO", "message": null, "type": "metric", "label": "sum", "value": 51.285521149635315, "epoch": 1}
+{"asctime": "2021-02-03 10:52:51", "levelname": "INFO", "message": null, "type": "metric", "label": "num_example", "value": 74, "epoch": 1}
+{"asctime": "2021-02-03 10:52:51", "levelname": "INFO", "message": null, "type": "metric", "label": "training_dist_target", "value": [0.488841082598712, 0.5108142027983794], "epoch": 1}
+{"asctime": "2021-02-03 10:52:51", "levelname": "INFO", "message": null, "type": "metric", "label": "num_correct", "value": 37, "epoch": 1}
+{"asctime": "2021-02-03 10:52:51", "levelname": "INFO", "message": null, "type": "metric", "label": "positive", "value": 0.0, "epoch": 1}
+{"asctime": "2021-02-03 10:52:51", "levelname": "INFO", "message": null, "type": "metric", "label": "total", "value": 37.0, "epoch": 1}
+{"asctime": "2021-02-03 10:52:51", "levelname": "INFO", "message": "Engine run starting with max_epochs=1."}
+{"asctime": "2021-02-03 10:52:51", "levelname": "INFO", "message": "Epoch[1] Complete. Time taken: 00:00:00"}
+{"asctime": "2021-02-03 10:52:51", "levelname": "INFO", "message": "Engine run complete. Time taken: 00:00:00"}
+{"asctime": "2021-02-03 10:52:51", "levelname": "INFO", "message": null, "type": "metric", "label": "value", "value": 1.0, "epoch": 1}
+{"asctime": "2021-02-03 10:52:51", "levelname": "INFO", "message": null, "type": "metric", "label": "sum", "value": 1.3896594047546387, "epoch": 1}
+{"asctime": "2021-02-03 10:52:51", "levelname": "INFO", "message": null, "type": "metric", "label": "num_example", "value": 2, "epoch": 1}
+{"asctime": "2021-02-03 10:52:51", "levelname": "INFO", "message": null, "type": "metric", "label": "validation_dist_target", "value": [0.5301614999771118, 0.4696897864341736], "epoch": 1}
+{"asctime": "2021-02-03 10:52:51", "levelname": "INFO", "message": null, "type": "metric", "label": "num_correct", "value": 1, "epoch": 1}
+{"asctime": "2021-02-03 10:52:51", "levelname": "INFO", "message": null, "type": "metric", "label": "positive", "value": 1.0, "epoch": 1}
+{"asctime": "2021-02-03 10:52:51", "levelname": "INFO", "message": null, "type": "metric", "label": "total", "value": 1.0, "epoch": 1}
+{"asctime": "2021-02-03 10:52:51", "levelname": "INFO", "message": "==> Try 1"}
+{"asctime": "2021-02-03 10:52:52", "levelname": "INFO", "message": "Epoch[1] Complete. Time taken: 00:00:29"}
+{"asctime": "2021-02-03 10:52:52", "levelname": "INFO", "message": "Epoch: 2"}
+{"asctime": "2021-02-03 10:52:52", "levelname": "INFO", "message": "LR: 0.001"}
+{"asctime": "2021-02-03 10:53:18", "levelname": "INFO", "message": null, "type": "metric", "label": "value", "value": 1.0, "epoch": 2}
+{"asctime": "2021-02-03 10:53:18", "levelname": "INFO", "message": null, "type": "metric", "label": "sum", "value": 51.13513243198395, "epoch": 2}
+{"asctime": "2021-02-03 10:53:18", "levelname": "INFO", "message": null, "type": "metric", "label": "num_example", "value": 74, "epoch": 2}
+{"asctime": "2021-02-03 10:53:18", "levelname": "INFO", "message": null, "type": "metric", "label": "training_dist_target", "value": [0.5280567375389306, 0.4679908752441406], "epoch": 2}
+{"asctime": "2021-02-03 10:53:18", "levelname": "INFO", "message": null, "type": "metric", "label": "num_correct", "value": 37, "epoch": 2}
+{"asctime": "2021-02-03 10:53:18", "levelname": "INFO", "message": null, "type": "metric", "label": "positive", "value": 37.0, "epoch": 2}
+{"asctime": "2021-02-03 10:53:18", "levelname": "INFO", "message": null, "type": "metric", "label": "total", "value": 37.0, "epoch": 2}
+{"asctime": "2021-02-03 10:53:18", "levelname": "INFO", "message": "Engine run starting with max_epochs=1."}
+{"asctime": "2021-02-03 10:53:18", "levelname": "INFO", "message": "Epoch[1] Complete. Time taken: 00:00:00"}
+{"asctime": "2021-02-03 10:53:18", "levelname": "INFO", "message": "Engine run complete. Time taken: 00:00:00"}
+{"asctime": "2021-02-03 10:53:18", "levelname": "INFO", "message": null, "type": "metric", "label": "value", "value": 0.0, "epoch": 2}
+{"asctime": "2021-02-03 10:53:18", "levelname": "INFO", "message": null, "type": "metric", "label": "sum", "value": 1.3992633819580078, "epoch": 2}
+{"asctime": "2021-02-03 10:53:18", "levelname": "INFO", "message": null, "type": "metric", "label": "num_example", "value": 2, "epoch": 2}
+{"asctime": "2021-02-03 10:53:18", "levelname": "INFO", "message": null, "type": "metric", "label": "validation_dist_target", "value": [0.4441046714782715, 0.5560699105262756], "epoch": 2}
+{"asctime": "2021-02-03 10:53:18", "levelname": "INFO", "message": null, "type": "metric", "label": "num_correct", "value": 1, "epoch": 2}
+{"asctime": "2021-02-03 10:53:18", "levelname": "INFO", "message": null, "type": "metric", "label": "positive", "value": 0.0, "epoch": 2}
+{"asctime": "2021-02-03 10:53:18", "levelname": "INFO", "message": null, "type": "metric", "label": "total", "value": 1.0, "epoch": 2}
+{"asctime": "2021-02-03 10:53:18", "levelname": "INFO", "message": "==> Try 1"}
+{"asctime": "2021-02-03 10:53:19", "levelname": "INFO", "message": "Epoch[2] Complete. Time taken: 00:00:27"}
+{"asctime": "2021-02-03 10:53:19", "levelname": "INFO", "message": "Epoch: 3"}
+{"asctime": "2021-02-03 10:53:19", "levelname": "INFO", "message": "LR: 0.001"}
+{"asctime": "2021-02-03 10:53:44", "levelname": "INFO", "message": null, "type": "metric", "label": "value", "value": 0.0, "epoch": 3}
+{"asctime": "2021-02-03 10:53:44", "levelname": "INFO", "message": null, "type": "metric", "label": "sum", "value": 51.29008626937866, "epoch": 3}
+{"asctime": "2021-02-03 10:53:44", "levelname": "INFO", "message": null, "type": "metric", "label": "num_example", "value": 74, "epoch": 3}
+{"asctime": "2021-02-03 10:53:44", "levelname": "INFO", "message": null, "type": "metric", "label": "training_dist_target", "value": [0.44111566285829285, 0.552606995041306], "epoch": 3}
+{"asctime": "2021-02-03 10:53:44", "levelname": "INFO", "message": null, "type": "metric", "label": "num_correct", "value": 37, "epoch": 3}
+{"asctime": "2021-02-03 10:53:44", "levelname": "INFO", "message": null, "type": "metric", "label": "positive", "value": 0.0, "epoch": 3}
+{"asctime": "2021-02-03 10:53:44", "levelname": "INFO", "message": null, "type": "metric", "label": "total", "value": 37.0, "epoch": 3}
+{"asctime": "2021-02-03 10:53:44", "levelname": "INFO", "message": "Engine run starting with max_epochs=1."}
+{"asctime": "2021-02-03 10:53:44", "levelname": "INFO", "message": "Epoch[1] Complete. Time taken: 00:00:00"}
+{"asctime": "2021-02-03 10:53:44", "levelname": "INFO", "message": "Engine run complete. Time taken: 00:00:00"}
+{"asctime": "2021-02-03 10:53:44", "levelname": "INFO", "message": null, "type": "metric", "label": "value", "value": 1.0, "epoch": 3}
+{"asctime": "2021-02-03 10:53:44", "levelname": "INFO", "message": null, "type": "metric", "label": "sum", "value": 1.381531834602356, "epoch": 3}
+{"asctime": "2021-02-03 10:53:44", "levelname": "INFO", "message": null, "type": "metric", "label": "num_example", "value": 2, "epoch": 3}
+{"asctime": "2021-02-03 10:53:44", "levelname": "INFO", "message": null, "type": "metric", "label": "validation_dist_target", "value": [0.4995950162410736, 0.49801963567733765], "epoch": 3}
+{"asctime": "2021-02-03 10:53:44", "levelname": "INFO", "message": null, "type": "metric", "label": "num_correct", "value": 2, "epoch": 3}
+{"asctime": "2021-02-03 10:53:44", "levelname": "INFO", "message": null, "type": "metric", "label": "positive", "value": 1.0, "epoch": 3}
+{"asctime": "2021-02-03 10:53:44", "levelname": "INFO", "message": null, "type": "metric", "label": "total", "value": 1.0, "epoch": 3}
+{"asctime": "2021-02-03 10:53:44", "levelname": "INFO", "message": "==> Try 1"}
+{"asctime": "2021-02-03 10:53:45", "levelname": "INFO", "message": "Epoch[3] Complete. Time taken: 00:00:26"}
+{"asctime": "2021-02-03 10:53:45", "levelname": "INFO", "message": "Epoch: 4"}
+{"asctime": "2021-02-03 10:53:45", "levelname": "INFO", "message": "LR: 0.001"}
+{"asctime": "2021-02-03 10:54:09", "levelname": "INFO", "message": null, "type": "metric", "label": "value", "value": 0.8378378378378378, "epoch": 4}
+{"asctime": "2021-02-03 10:54:09", "levelname": "INFO", "message": null, "type": "metric", "label": "sum", "value": 50.26135969161987, "epoch": 4}
+{"asctime": "2021-02-03 10:54:09", "levelname": "INFO", "message": null, "type": "metric", "label": "num_example", "value": 74, "epoch": 4}
+{"asctime": "2021-02-03 10:54:09", "levelname": "INFO", "message": null, "type": "metric", "label": "training_dist_target", "value": [0.49606416032120987, 0.4898006336109058], "epoch": 4}
+{"asctime": "2021-02-03 10:54:09", "levelname": "INFO", "message": null, "type": "metric", "label": "num_correct", "value": 63, "epoch": 4}
+{"asctime": "2021-02-03 10:54:09", "levelname": "INFO", "message": null, "type": "metric", "label": "positive", "value": 31.0, "epoch": 4}
+{"asctime": "2021-02-03 10:54:09", "levelname": "INFO", "message": null, "type": "metric", "label": "total", "value": 37.0, "epoch": 4}
+{"asctime": "2021-02-03 10:54:09", "levelname": "INFO", "message": "Engine run starting with max_epochs=1."}
+{"asctime": "2021-02-03 10:54:09", "levelname": "INFO", "message": "Epoch[1] Complete. Time taken: 00:00:00"}
+{"asctime": "2021-02-03 10:54:09", "levelname": "INFO", "message": "Engine run complete. Time taken: 00:00:00"}
+{"asctime": "2021-02-03 10:54:09", "levelname": "INFO", "message": null, "type": "metric", "label": "value", "value": 1.0, "epoch": 4}
+{"asctime": "2021-02-03 10:54:09", "levelname": "INFO", "message": null, "type": "metric", "label": "sum", "value": 1.3818821907043457, "epoch": 4}
+{"asctime": "2021-02-03 10:54:09", "levelname": "INFO", "message": null, "type": "metric", "label": "num_example", "value": 2, "epoch": 4}
+{"asctime": "2021-02-03 10:54:09", "levelname": "INFO", "message": null, "type": "metric", "label": "validation_dist_target", "value": [0.5421328544616699, 0.45157569646835327], "epoch": 4}
+{"asctime": "2021-02-03 10:54:09", "levelname": "INFO", "message": null, "type": "metric", "label": "num_correct", "value": 1, "epoch": 4}
+{"asctime": "2021-02-03 10:54:09", "levelname": "INFO", "message": null, "type": "metric", "label": "positive", "value": 1.0, "epoch": 4}
+{"asctime": "2021-02-03 10:54:09", "levelname": "INFO", "message": null, "type": "metric", "label": "total", "value": 1.0, "epoch": 4}
+{"asctime": "2021-02-03 10:54:09", "levelname": "INFO", "message": "==> Try 1"}
+{"asctime": "2021-02-03 10:54:10", "levelname": "INFO", "message": "Epoch[4] Complete. Time taken: 00:00:26"}
+{"asctime": "2021-02-03 10:54:10", "levelname": "INFO", "message": "Epoch: 5"}
+{"asctime": "2021-02-03 10:54:10", "levelname": "INFO", "message": "LR: 0.001"}
+{"asctime": "2021-02-03 10:54:33", "levelname": "INFO", "message": null, "type": "metric", "label": "value", "value": 1.0, "epoch": 5}
+{"asctime": "2021-02-03 10:54:33", "levelname": "INFO", "message": null, "type": "metric", "label": "sum", "value": 50.26310193538666, "epoch": 5}
+{"asctime": "2021-02-03 10:54:33", "levelname": "INFO", "message": null, "type": "metric", "label": "num_example", "value": 74, "epoch": 5}
+{"asctime": "2021-02-03 10:54:33", "levelname": "INFO", "message": null, "type": "metric", "label": "training_dist_target", "value": [0.5443632796004012, 0.4355846611229149], "epoch": 5}
+{"asctime": "2021-02-03 10:54:33", "levelname": "INFO", "message": null, "type": "metric", "label": "num_correct", "value": 37, "epoch": 5}
+{"asctime": "2021-02-03 10:54:33", "levelname": "INFO", "message": null, "type": "metric", "label": "positive", "value": 37.0, "epoch": 5}
+{"asctime": "2021-02-03 10:54:33", "levelname": "INFO", "message": null, "type": "metric", "label": "total", "value": 37.0, "epoch": 5}
+{"asctime": "2021-02-03 10:54:33", "levelname": "INFO", "message": "Engine run starting with max_epochs=1."}
+{"asctime": "2021-02-03 10:54:33", "levelname": "INFO", "message": "Epoch[1] Complete. Time taken: 00:00:00"}
+{"asctime": "2021-02-03 10:54:33", "levelname": "INFO", "message": "Engine run complete. Time taken: 00:00:00"}
+{"asctime": "2021-02-03 10:54:33", "levelname": "INFO", "message": null, "type": "metric", "label": "value", "value": 1.0, "epoch": 5}
+{"asctime": "2021-02-03 10:54:33", "levelname": "INFO", "message": null, "type": "metric", "label": "sum", "value": 1.3687965869903564, "epoch": 5}
+{"asctime": "2021-02-03 10:54:33", "levelname": "INFO", "message": null, "type": "metric", "label": "num_example", "value": 2, "epoch": 5}
+{"asctime": "2021-02-03 10:54:33", "levelname": "INFO", "message": null, "type": "metric", "label": "validation_dist_target", "value": [0.492498517036438, 0.4986951947212219], "epoch": 5}
+{"asctime": "2021-02-03 10:54:33", "levelname": "INFO", "message": null, "type": "metric", "label": "num_correct", "value": 2, "epoch": 5}
+{"asctime": "2021-02-03 10:54:33", "levelname": "INFO", "message": null, "type": "metric", "label": "positive", "value": 1.0, "epoch": 5}
+{"asctime": "2021-02-03 10:54:33", "levelname": "INFO", "message": null, "type": "metric", "label": "total", "value": 1.0, "epoch": 5}
+{"asctime": "2021-02-03 10:54:33", "levelname": "INFO", "message": "==> Try 1"}
+{"asctime": "2021-02-03 10:54:34", "levelname": "INFO", "message": "Epoch[5] Complete. Time taken: 00:00:24"}
+{"asctime": "2021-02-03 10:54:34", "levelname": "INFO", "message": "Epoch: 6"}
+{"asctime": "2021-02-03 10:54:34", "levelname": "INFO", "message": "LR: 0.001"}
+{"asctime": "2021-02-03 10:54:57", "levelname": "INFO", "message": null, "type": "metric", "label": "value", "value": 0.8378378378378378, "epoch": 6}
+{"asctime": "2021-02-03 10:54:57", "levelname": "INFO", "message": null, "type": "metric", "label": "sum", "value": 48.77262783050537, "epoch": 6}
+{"asctime": "2021-02-03 10:54:57", "levelname": "INFO", "message": null, "type": "metric", "label": "num_example", "value": 74, "epoch": 6}
+{"asctime": "2021-02-03 10:54:57", "levelname": "INFO", "message": null, "type": "metric", "label": "training_dist_target", "value": [0.4924710763467325, 0.47203543379500107], "epoch": 6}
+{"asctime": "2021-02-03 10:54:57", "levelname": "INFO", "message": null, "type": "metric", "label": "num_correct", "value": 59, "epoch": 6}
+{"asctime": "2021-02-03 10:54:57", "levelname": "INFO", "message": null, "type": "metric", "label": "positive", "value": 31.0, "epoch": 6}
+{"asctime": "2021-02-03 10:54:57", "levelname": "INFO", "message": null, "type": "metric", "label": "total", "value": 37.0, "epoch": 6}
+{"asctime": "2021-02-03 10:54:57", "levelname": "INFO", "message": "Engine run starting with max_epochs=1."}
+{"asctime": "2021-02-03 10:54:57", "levelname": "INFO", "message": "Epoch[1] Complete. Time taken: 00:00:00"}
+{"asctime": "2021-02-03 10:54:57", "levelname": "INFO", "message": "Engine run complete. Time taken: 00:00:00"}
+{"asctime": "2021-02-03 10:54:57", "levelname": "INFO", "message": null, "type": "metric", "label": "value", "value": 0.0, "epoch": 6}
+{"asctime": "2021-02-03 10:54:57", "levelname": "INFO", "message": null, "type": "metric", "label": "sum", "value": 1.3720827102661133, "epoch": 6}
+{"asctime": "2021-02-03 10:54:57", "levelname": "INFO", "message": null, "type": "metric", "label": "num_example", "value": 2, "epoch": 6}
+{"asctime": "2021-02-03 10:54:57", "levelname": "INFO", "message": null, "type": "metric", "label": "validation_dist_target", "value": [0.4443572461605072, 0.5436307191848755], "epoch": 6}
+{"asctime": "2021-02-03 10:54:57", "levelname": "INFO", "message": null, "type": "metric", "label": "num_correct", "value": 1, "epoch": 6}
+{"asctime": "2021-02-03 10:54:57", "levelname": "INFO", "message": null, "type": "metric", "label": "positive", "value": 0.0, "epoch": 6}
+{"asctime": "2021-02-03 10:54:57", "levelname": "INFO", "message": null, "type": "metric", "label": "total", "value": 1.0, "epoch": 6}
+{"asctime": "2021-02-03 10:54:57", "levelname": "INFO", "message": "==> Try 1"}
+{"asctime": "2021-02-03 10:54:58", "levelname": "INFO", "message": "Epoch[6] Complete. Time taken: 00:00:24"}
+{"asctime": "2021-02-03 10:54:58", "levelname": "INFO", "message": "Epoch: 7"}
+{"asctime": "2021-02-03 10:54:58", "levelname": "INFO", "message": "LR: 0.001"}
+{"asctime": "2021-02-03 10:55:22", "levelname": "INFO", "message": null, "type": "metric", "label": "value", "value": 0.6216216216216216, "epoch": 7}
+{"asctime": "2021-02-03 10:55:22", "levelname": "INFO", "message": null, "type": "metric", "label": "sum", "value": 47.63788020610809, "epoch": 7}
+{"asctime": "2021-02-03 10:55:22", "levelname": "INFO", "message": null, "type": "metric", "label": "num_example", "value": 74, "epoch": 7}
+{"asctime": "2021-02-03 10:55:22", "levelname": "INFO", "message": null, "type": "metric", "label": "training_dist_target", "value": [0.4466376949001003, 0.4995058420542124], "epoch": 7}
+{"asctime": "2021-02-03 10:55:22", "levelname": "INFO", "message": null, "type": "metric", "label": "num_correct", "value": 59, "epoch": 7}
+{"asctime": "2021-02-03 10:55:22", "levelname": "INFO", "message": null, "type": "metric", "label": "positive", "value": 23.0, "epoch": 7}
+{"asctime": "2021-02-03 10:55:22", "levelname": "INFO", "message": null, "type": "metric", "label": "total", "value": 37.0, "epoch": 7}
+{"asctime": "2021-02-03 10:55:22", "levelname": "INFO", "message": "Engine run starting with max_epochs=1."}
+{"asctime": "2021-02-03 10:55:22", "levelname": "INFO", "message": "Epoch[1] Complete. Time taken: 00:00:00"}
+{"asctime": "2021-02-03 10:55:22", "levelname": "INFO", "message": "Engine run complete. Time taken: 00:00:00"}
+{"asctime": "2021-02-03 10:55:22", "levelname": "INFO", "message": null, "type": "metric", "label": "value", "value": 0.0, "epoch": 7}
+{"asctime": "2021-02-03 10:55:22", "levelname": "INFO", "message": null, "type": "metric", "label": "sum", "value": 1.3278732299804688, "epoch": 7}
+{"asctime": "2021-02-03 10:55:22", "levelname": "INFO", "message": null, "type": "metric", "label": "num_example", "value": 2, "epoch": 7}
+{"asctime": "2021-02-03 10:55:22", "levelname": "INFO", "message": null, "type": "metric", "label": "validation_dist_target", "value": [0.4557678997516632, 0.5130013227462769], "epoch": 7}
+{"asctime": "2021-02-03 10:55:22", "levelname": "INFO", "message": null, "type": "metric", "label": "num_correct", "value": 1, "epoch": 7}
+{"asctime": "2021-02-03 10:55:22", "levelname": "INFO", "message": null, "type": "metric", "label": "positive", "value": 0.0, "epoch": 7}
+{"asctime": "2021-02-03 10:55:22", "levelname": "INFO", "message": null, "type": "metric", "label": "total", "value": 1.0, "epoch": 7}
+{"asctime": "2021-02-03 10:55:22", "levelname": "INFO", "message": "==> Try 1"}
+{"asctime": "2021-02-03 10:55:23", "levelname": "INFO", "message": "Epoch[7] Complete. Time taken: 00:00:25"}
+{"asctime": "2021-02-03 10:55:23", "levelname": "INFO", "message": "Epoch: 8"}
+{"asctime": "2021-02-03 10:55:23", "levelname": "INFO", "message": "LR: 0.001"}
+{"asctime": "2021-02-03 10:55:44", "levelname": "INFO", "message": null, "type": "metric", "label": "value", "value": 0.8108108108108109, "epoch": 8}
+{"asctime": "2021-02-03 10:55:44", "levelname": "INFO", "message": null, "type": "metric", "label": "sum", "value": 44.41277086734772, "epoch": 8}
+{"asctime": "2021-02-03 10:55:44", "levelname": "INFO", "message": null, "type": "metric", "label": "num_example", "value": 74, "epoch": 8}
+{"asctime": "2021-02-03 10:55:44", "levelname": "INFO", "message": null, "type": "metric", "label": "training_dist_target", "value": [0.46232883350269216, 0.43591195183831294], "epoch": 8}
+{"asctime": "2021-02-03 10:55:44", "levelname": "INFO", "message": null, "type": "metric", "label": "num_correct", "value": 63, "epoch": 8}
+{"asctime": "2021-02-03 10:55:44", "levelname": "INFO", "message": null, "type": "metric", "label": "positive", "value": 30.0, "epoch": 8}
+{"asctime": "2021-02-03 10:55:44", "levelname": "INFO", "message": null, "type": "metric", "label": "total", "value": 37.0, "epoch": 8}
+{"asctime": "2021-02-03 10:55:44", "levelname": "INFO", "message": "Engine run starting with max_epochs=1."}
+{"asctime": "2021-02-03 10:55:44", "levelname": "INFO", "message": "Epoch[1] Complete. Time taken: 00:00:00"}
+{"asctime": "2021-02-03 10:55:44", "levelname": "INFO", "message": "Engine run complete. Time taken: 00:00:00"}
+{"asctime": "2021-02-03 10:55:44", "levelname": "INFO", "message": null, "type": "metric", "label": "value", "value": 1.0, "epoch": 8}
+{"asctime": "2021-02-03 10:55:44", "levelname": "INFO", "message": null, "type": "metric", "label": "sum", "value": 1.2632759809494019, "epoch": 8}
+{"asctime": "2021-02-03 10:55:44", "levelname": "INFO", "message": null, "type": "metric", "label": "num_example", "value": 2, "epoch": 8}
+{"asctime": "2021-02-03 10:55:44", "levelname": "INFO", "message": null, "type": "metric", "label": "validation_dist_target", "value": [0.4557875096797943, 0.4804854393005371], "epoch": 8}
+{"asctime": "2021-02-03 10:55:44", "levelname": "INFO", "message": null, "type": "metric", "label": "num_correct", "value": 2, "epoch": 8}
+{"asctime": "2021-02-03 10:55:44", "levelname": "INFO", "message": null, "type": "metric", "label": "positive", "value": 1.0, "epoch": 8}
+{"asctime": "2021-02-03 10:55:44", "levelname": "INFO", "message": null, "type": "metric", "label": "total", "value": 1.0, "epoch": 8}
+{"asctime": "2021-02-03 10:55:44", "levelname": "INFO", "message": "==> Try 1"}
+{"asctime": "2021-02-03 10:55:45", "levelname": "INFO", "message": "Epoch[8] Complete. Time taken: 00:00:22"}
+{"asctime": "2021-02-03 10:55:45", "levelname": "INFO", "message": "Epoch: 9"}
+{"asctime": "2021-02-03 10:55:45", "levelname": "INFO", "message": "LR: 0.001"}
+{"asctime": "2021-02-03 10:56:09", "levelname": "INFO", "message": null, "type": "metric", "label": "value", "value": 0.8918918918918919, "epoch": 9}
+{"asctime": "2021-02-03 10:56:09", "levelname": "INFO", "message": null, "type": "metric", "label": "sum", "value": 40.79286026954651, "epoch": 9}
+{"asctime": "2021-02-03 10:56:09", "levelname": "INFO", "message": null, "type": "metric", "label": "num_example", "value": 74, "epoch": 9}
+{"asctime": "2021-02-03 10:56:09", "levelname": "INFO", "message": null, "type": "metric", "label": "training_dist_target", "value": [0.4742199150291649, 0.35666153882000895], "epoch": 9}
+{"asctime": "2021-02-03 10:56:09", "levelname": "INFO", "message": null, "type": "metric", "label": "num_correct", "value": 58, "epoch": 9}
+{"asctime": "2021-02-03 10:56:09", "levelname": "INFO", "message": null, "type": "metric", "label": "positive", "value": 33.0, "epoch": 9}
+{"asctime": "2021-02-03 10:56:09", "levelname": "INFO", "message": null, "type": "metric", "label": "total", "value": 37.0, "epoch": 9}
+{"asctime": "2021-02-03 10:56:09", "levelname": "INFO", "message": "Engine run starting with max_epochs=1."}
+{"asctime": "2021-02-03 10:56:09", "levelname": "INFO", "message": "Epoch[1] Complete. Time taken: 00:00:00"}
+{"asctime": "2021-02-03 10:56:09", "levelname": "INFO", "message": "Engine run complete. Time taken: 00:00:00"}
+{"asctime": "2021-02-03 10:56:09", "levelname": "INFO", "message": null, "type": "metric", "label": "value", "value": 0.0, "epoch": 9}
+{"asctime": "2021-02-03 10:56:09", "levelname": "INFO", "message": null, "type": "metric", "label": "sum", "value": 1.3608620166778564, "epoch": 9}
+{"asctime": "2021-02-03 10:56:09", "levelname": "INFO", "message": null, "type": "metric", "label": "num_example", "value": 2, "epoch": 9}
+{"asctime": "2021-02-03 10:56:09", "levelname": "INFO", "message": null, "type": "metric", "label": "validation_dist_target", "value": [0.31009534001350403, 0.628296971321106], "epoch": 9}
+{"asctime": "2021-02-03 10:56:09", "levelname": "INFO", "message": null, "type": "metric", "label": "num_correct", "value": 1, "epoch": 9}
+{"asctime": "2021-02-03 10:56:09", "levelname": "INFO", "message": null, "type": "metric", "label": "positive", "value": 0.0, "epoch": 9}
+{"asctime": "2021-02-03 10:56:09", "levelname": "INFO", "message": null, "type": "metric", "label": "total", "value": 1.0, "epoch": 9}
+{"asctime": "2021-02-03 10:56:09", "levelname": "INFO", "message": "==> Try 1"}
+{"asctime": "2021-02-03 10:56:10", "levelname": "INFO", "message": "Epoch[9] Complete. Time taken: 00:00:25"}
+{"asctime": "2021-02-03 10:56:10", "levelname": "INFO", "message": "Epoch: 10"}
+{"asctime": "2021-02-03 10:56:10", "levelname": "INFO", "message": "LR: 0.001"}
+{"asctime": "2021-02-03 10:56:34", "levelname": "INFO", "message": null, "type": "metric", "label": "value", "value": 0.6756756756756757, "epoch": 10}
+{"asctime": "2021-02-03 10:56:34", "levelname": "INFO", "message": null, "type": "metric", "label": "sum", "value": 37.000269055366516, "epoch": 10}
+{"asctime": "2021-02-03 10:56:34", "levelname": "INFO", "message": null, "type": "metric", "label": "num_example", "value": 74, "epoch": 10}
+{"asctime": "2021-02-03 10:56:34", "levelname": "INFO", "message": null, "type": "metric", "label": "training_dist_target", "value": [0.35239838265083934, 0.4007732546007311], "epoch": 10}
+{"asctime": "2021-02-03 10:56:34", "levelname": "INFO", "message": null, "type": "metric", "label": "num_correct", "value": 58, "epoch": 10}
+{"asctime": "2021-02-03 10:56:34", "levelname": "INFO", "message": null, "type": "metric", "label": "positive", "value": 25.0, "epoch": 10}
+{"asctime": "2021-02-03 10:56:34", "levelname": "INFO", "message": null, "type": "metric", "label": "total", "value": 37.0, "epoch": 10}
+{"asctime": "2021-02-03 10:56:34", "levelname": "INFO", "message": "Engine run starting with max_epochs=1."}
+{"asctime": "2021-02-03 10:56:34", "levelname": "INFO", "message": "Epoch[1] Complete. Time taken: 00:00:00"}
+{"asctime": "2021-02-03 10:56:34", "levelname": "INFO", "message": "Engine run complete. Time taken: 00:00:00"}
+{"asctime": "2021-02-03 10:56:34", "levelname": "INFO", "message": null, "type": "metric", "label": "value", "value": 0.0, "epoch": 10}
+{"asctime": "2021-02-03 10:56:34", "levelname": "INFO", "message": null, "type": "metric", "label": "sum", "value": 1.3093116283416748, "epoch": 10}
+{"asctime": "2021-02-03 10:56:34", "levelname": "INFO", "message": null, "type": "metric", "label": "num_example", "value": 2, "epoch": 10}
+{"asctime": "2021-02-03 10:56:34", "levelname": "INFO", "message": null, "type": "metric", "label": "validation_dist_target", "value": [0.25037795305252075, 0.6398106813430786], "epoch": 10}
+{"asctime": "2021-02-03 10:56:34", "levelname": "INFO", "message": null, "type": "metric", "label": "num_correct", "value": 1, "epoch": 10}
+{"asctime": "2021-02-03 10:56:34", "levelname": "INFO", "message": null, "type": "metric", "label": "positive", "value": 0.0, "epoch": 10}
+{"asctime": "2021-02-03 10:56:34", "levelname": "INFO", "message": null, "type": "metric", "label": "total", "value": 1.0, "epoch": 10}
+{"asctime": "2021-02-03 10:56:34", "levelname": "INFO", "message": "==> Try 1"}
+{"asctime": "2021-02-03 10:56:35", "levelname": "INFO", "message": "Epoch[10] Complete. Time taken: 00:00:25"}
+{"asctime": "2021-02-03 10:56:35", "levelname": "INFO", "message": "Epoch: 11"}
+{"asctime": "2021-02-03 10:56:35", "levelname": "INFO", "message": "LR: 0.001"}
+{"asctime": "2021-02-03 10:56:58", "levelname": "INFO", "message": null, "type": "metric", "label": "value", "value": 0.8108108108108109, "epoch": 11}
+{"asctime": "2021-02-03 10:56:58", "levelname": "INFO", "message": null, "type": "metric", "label": "sum", "value": 30.276357114315033, "epoch": 11}
+{"asctime": "2021-02-03 10:56:58", "levelname": "INFO", "message": null, "type": "metric", "label": "num_example", "value": 74, "epoch": 11}
+{"asctime": "2021-02-03 10:56:58", "levelname": "INFO", "message": null, "type": "metric", "label": "training_dist_target", "value": [0.31403969429634715, 0.3043621166332348], "epoch": 11}
+{"asctime": "2021-02-03 10:56:58", "levelname": "INFO", "message": null, "type": "metric", "label": "num_correct", "value": 63, "epoch": 11}
+{"asctime": "2021-02-03 10:56:58", "levelname": "INFO", "message": null, "type": "metric", "label": "positive", "value": 30.0, "epoch": 11}
+{"asctime": "2021-02-03 10:56:58", "levelname": "INFO", "message": null, "type": "metric", "label": "total", "value": 37.0, "epoch": 11}
+{"asctime": "2021-02-03 10:56:58", "levelname": "INFO", "message": "Engine run starting with max_epochs=1."}
+{"asctime": "2021-02-03 10:56:58", "levelname": "INFO", "message": "Epoch[1] Complete. Time taken: 00:00:00"}
+{"asctime": "2021-02-03 10:56:58", "levelname": "INFO", "message": "Engine run complete. Time taken: 00:00:00"}
+{"asctime": "2021-02-03 10:56:58", "levelname": "INFO", "message": null, "type": "metric", "label": "value", "value": 0.0, "epoch": 11}
+{"asctime": "2021-02-03 10:56:58", "levelname": "INFO", "message": null, "type": "metric", "label": "sum", "value": 0.9916061162948608, "epoch": 11}
+{"asctime": "2021-02-03 10:56:58", "levelname": "INFO", "message": null, "type": "metric", "label": "num_example", "value": 2, "epoch": 11}
+{"asctime": "2021-02-03 10:56:58", "levelname": "INFO", "message": null, "type": "metric", "label": "validation_dist_target", "value": [0.221794992685318, 0.5232871174812317], "epoch": 11}
+{"asctime": "2021-02-03 10:56:58", "levelname": "INFO", "message": null, "type": "metric", "label": "num_correct", "value": 1, "epoch": 11}
+{"asctime": "2021-02-03 10:56:58", "levelname": "INFO", "message": null, "type": "metric", "label": "positive", "value": 0.0, "epoch": 11}
+{"asctime": "2021-02-03 10:56:58", "levelname": "INFO", "message": null, "type": "metric", "label": "total", "value": 1.0, "epoch": 11}
+{"asctime": "2021-02-03 10:56:58", "levelname": "INFO", "message": "==> Try 1"}
+{"asctime": "2021-02-03 10:56:59", "levelname": "INFO", "message": "Epoch[11] Complete. Time taken: 00:00:24"}
+{"asctime": "2021-02-03 10:56:59", "levelname": "INFO", "message": "Epoch: 12"}
+{"asctime": "2021-02-03 10:56:59", "levelname": "INFO", "message": "LR: 0.001"}
+{"asctime": "2021-02-03 10:57:22", "levelname": "INFO", "message": null, "type": "metric", "label": "value", "value": 0.8918918918918919, "epoch": 12}
+{"asctime": "2021-02-03 10:57:22", "levelname": "INFO", "message": null, "type": "metric", "label": "sum", "value": 39.05171036720276, "epoch": 12}
+{"asctime": "2021-02-03 10:57:22", "levelname": "INFO", "message": null, "type": "metric", "label": "num_example", "value": 74, "epoch": 12}
+{"asctime": "2021-02-03 10:57:22", "levelname": "INFO", "message": null, "type": "metric", "label": "training_dist_target", "value": [0.48214582494787267, 0.17368442947800095], "epoch": 12}
+{"asctime": "2021-02-03 10:57:22", "levelname": "INFO", "message": null, "type": "metric", "label": "num_correct", "value": 51, "epoch": 12}
+{"asctime": "2021-02-03 10:57:22", "levelname": "INFO", "message": null, "type": "metric", "label": "positive", "value": 33.0, "epoch": 12}
+{"asctime": "2021-02-03 10:57:22", "levelname": "INFO", "message": null, "type": "metric", "label": "total", "value": 37.0, "epoch": 12}
+{"asctime": "2021-02-03 10:57:22", "levelname": "INFO", "message": "Engine run starting with max_epochs=1."}
+{"asctime": "2021-02-03 10:57:22", "levelname": "INFO", "message": "Epoch[1] Complete. Time taken: 00:00:00"}
+{"asctime": "2021-02-03 10:57:22", "levelname": "INFO", "message": "Engine run complete. Time taken: 00:00:00"}
+{"asctime": "2021-02-03 10:57:22", "levelname": "INFO", "message": null, "type": "metric", "label": "value", "value": 0.0, "epoch": 12}
+{"asctime": "2021-02-03 10:57:22", "levelname": "INFO", "message": null, "type": "metric", "label": "sum", "value": 2.595886468887329, "epoch": 12}
+{"asctime": "2021-02-03 10:57:22", "levelname": "INFO", "message": null, "type": "metric", "label": "num_example", "value": 2, "epoch": 12}
+{"asctime": "2021-02-03 10:57:22", "levelname": "INFO", "message": null, "type": "metric", "label": "validation_dist_target", "value": [0.06555330753326416, 0.9201883673667908], "epoch": 12}
+{"asctime": "2021-02-03 10:57:22", "levelname": "INFO", "message": null, "type": "metric", "label": "num_correct", "value": 1, "epoch": 12}
+{"asctime": "2021-02-03 10:57:22", "levelname": "INFO", "message": null, "type": "metric", "label": "positive", "value": 0.0, "epoch": 12}
+{"asctime": "2021-02-03 10:57:22", "levelname": "INFO", "message": null, "type": "metric", "label": "total", "value": 1.0, "epoch": 12}
+{"asctime": "2021-02-03 10:57:22", "levelname": "INFO", "message": "Epoch[12] Complete. Time taken: 00:00:23"}
+{"asctime": "2021-02-03 10:57:22", "levelname": "INFO", "message": "Engine run complete. Time taken: 00:04:59"}
+{"asctime": "2021-02-03 10:57:22", "levelname": "INFO", "message": "Calculating recall rate: sun2011"}
+Duplicate ID----: []
+{"asctime": "2021-02-03 10:57:23", "levelname": "INFO", "message": null, "result_path": "HOME_DIR/ranking_results/cadd_eclipse_2001-2007_2008_test_6119447.txt"}
+{"asctime": "2021-02-03 10:59:28", "levelname": "INFO", "message": "[] Throughput: 0.04803560717442598 bugs per second (bugs=6 ,seconds=124.9073417186737)"}
+{"asctime": "2021-02-03 10:59:28", "levelname": "INFO", "message": null, "type": "metric", "label": "recall_rate", "k": 1, "rate": 0.6666666666666666, "hit": 4, "total": 6, "epoch": 0}
+{"asctime": "2021-02-03 10:59:28", "levelname": "INFO", "message": null, "type": "metric", "label": "recall_rate", "k": 2, "rate": 0.8333333333333334, "hit": 5, "total": 6, "epoch": 0}
+{"asctime": "2021-02-03 10:59:28", "levelname": "INFO", "message": null, "type": "metric", "label": "recall_rate", "k": 3, "rate": 0.8333333333333334, "hit": 5, "total": 6, "epoch": 0}
+{"asctime": "2021-02-03 10:59:28", "levelname": "INFO", "message": null, "type": "metric", "label": "recall_rate", "k": 4, "rate": 1.0, "hit": 6, "total": 6, "epoch": 0}
+{"asctime": "2021-02-03 10:59:28", "levelname": "INFO", "message": null, "type": "metric", "label": "recall_rate", "k": 5, "rate": 1.0, "hit": 6, "total": 6, "epoch": 0}
+{"asctime": "2021-02-03 10:59:28", "levelname": "INFO", "message": null, "type": "metric", "label": "recall_rate", "k": 6, "rate": 1.0, "hit": 6, "total": 6, "epoch": 0}
+{"asctime": "2021-02-03 10:59:28", "levelname": "INFO", "message": null, "type": "metric", "label": "recall_rate", "k": 7, "rate": 1.0, "hit": 6, "total": 6, "epoch": 0}
+{"asctime": "2021-02-03 10:59:28", "levelname": "INFO", "message": null, "type": "metric", "label": "recall_rate", "k": 8, "rate": 1.0, "hit": 6, "total": 6, "epoch": 0}
+{"asctime": "2021-02-03 10:59:28", "levelname": "INFO", "message": null, "type": "metric", "label": "recall_rate", "k": 9, "rate": 1.0, "hit": 6, "total": 6, "epoch": 0}
+{"asctime": "2021-02-03 10:59:28", "levelname": "INFO", "message": null, "type": "metric", "label": "recall_rate", "k": 10, "rate": 1.0, "hit": 6, "total": 6, "epoch": 0}
+{"asctime": "2021-02-03 10:59:28", "levelname": "INFO", "message": null, "type": "metric", "label": "recall_rate", "k": 11, "rate": 1.0, "hit": 6, "total": 6, "epoch": 0}
+{"asctime": "2021-02-03 10:59:28", "levelname": "INFO", "message": null, "type": "metric", "label": "recall_rate", "k": 12, "rate": 1.0, "hit": 6, "total": 6, "epoch": 0}
+{"asctime": "2021-02-03 10:59:28", "levelname": "INFO", "message": null, "type": "metric", "label": "recall_rate", "k": 13, "rate": 1.0, "hit": 6, "total": 6, "epoch": 0}
+{"asctime": "2021-02-03 10:59:28", "levelname": "INFO", "message": null, "type": "metric", "label": "recall_rate", "k": 14, "rate": 1.0, "hit": 6, "total": 6, "epoch": 0}
+{"asctime": "2021-02-03 10:59:28", "levelname": "INFO", "message": null, "type": "metric", "label": "recall_rate", "k": 15, "rate": 1.0, "hit": 6, "total": 6, "epoch": 0}
+{"asctime": "2021-02-03 10:59:28", "levelname": "INFO", "message": null, "type": "metric", "label": "recall_rate", "k": 16, "rate": 1.0, "hit": 6, "total": 6, "epoch": 0}
+{"asctime": "2021-02-03 10:59:28", "levelname": "INFO", "message": null, "type": "metric", "label": "recall_rate", "k": 17, "rate": 1.0, "hit": 6, "total": 6, "epoch": 0}
+{"asctime": "2021-02-03 10:59:28", "levelname": "INFO", "message": null, "type": "metric", "label": "recall_rate", "k": 18, "rate": 1.0, "hit": 6, "total": 6, "epoch": 0}
+{"asctime": "2021-02-03 10:59:28", "levelname": "INFO", "message": null, "type": "metric", "label": "recall_rate", "k": 19, "rate": 1.0, "hit": 6, "total": 6, "epoch": 0}
+{"asctime": "2021-02-03 10:59:28", "levelname": "INFO", "message": null, "type": "metric", "label": "recall_rate", "k": 20, "rate": 1.0, "hit": 6, "total": 6, "epoch": 0}
+{"asctime": "2021-02-03 10:59:28", "levelname": "INFO", "message": null, "type": "metric", "label": "MAP", "value": 0.7916666666666666, "sum": 4.75, "total": 6, "epoch": 0}
+{"asctime": "2021-02-03 10:59:28", "levelname": "INFO", "message": "[1, 1, 1, 2, 4, 1]"}
