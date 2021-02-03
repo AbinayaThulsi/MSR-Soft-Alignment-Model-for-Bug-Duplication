@@ -1,7 +1,7 @@
 import numpy as np
 import torch
 
-from util.torch_util import padSequences
+from torch_util import padSequences
 
 
 class BasicInputHandler(object):

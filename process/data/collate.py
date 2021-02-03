@@ -1,7 +1,7 @@
 import numpy as np
 import torch
 
-from util.data_util import ReOrderedList
+from data_util import ReOrderedList
 from time import time
 
 

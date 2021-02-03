@@ -19,11 +19,11 @@ import sys
 import sklearn
 from torch.nn import CosineSimilarity
 
-from data.bug_report_database import BugReportDatabase
-from data.create_dataset_deshmukh import savePairs, saveTriplets
-from data.bug_dataset import BugDataset
-from data.preprocessing import concatenateSummaryAndDescription
-from util.data_util import createChunks
+from bug_report_database import BugReportDatabase
+from create_dataset_deshmukh import savePairs, saveTriplets
+from bug_dataset import BugDataset
+from preprocessing import concatenateSummaryAndDescription
+from data_util import createChunks
 
 
 class RandomNonDuplicateGenerator(object):

@@ -39,10 +39,10 @@ from metrics.metric import AverageLoss, MeanScoreDistance, ConfusionMatrix, Pred
 from metrics.ranking import PreselectListRanking, DeshmukhRanking, GeneralScorer, SunRanking, generateRecommendationList
 from model.compare_aggregate import SABD
 from model.loss import TripletLoss
-from util.jsontools import JsonLogFormatter
-from util.siamese_util import processCategoricalParam
-from util.torch_util import thresholded_output_transform
-from util.training_loop_util import logMetrics, logRankingResult, logConfusionMatrix
+from jsontools import JsonLogFormatter
+from siamese_util import processCategoricalParam
+from torch_util import thresholded_output_transform
+from training_loop_util import logMetrics, logRankingResult, logConfusionMatrix
 
 ex = Experiment("filter_model")
 

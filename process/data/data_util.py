@@ -62,7 +62,7 @@ class ReOrderedList(object):
 def createCategoricalPreprocessorAndLexicons(lexiconPath, bugReportDatabase):
     # Define Filters and set preprocessing steps
     basicFilter = [
-        data.preprocessing.TransformLowerCaseFilter(),
+        preprocessing.TransformLowerCaseFilter(),
     ]
 
     lexiconJsons = json.load(open(lexiconPath))
@@ -88,4 +88,4 @@ def createCategoricalPreprocessorAndLexicons(lexiconPath, bugReportDatabase):
 
     lexicons = [productLexicon, severityLexicon, componentLexicon, priorityLexicon]
 
-    return data.preprocessing.CategoricalPreprocessor(categoricalArgs, bugReportDatabase), lexicons
+    return preprocessing.CategoricalPreprocessor(categoricalArgs, bugReportDatabase), lexicons

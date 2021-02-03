@@ -15,8 +15,8 @@ from model.attention import SelfAttention
 from model.basic_module import TextCNN, MultilayerDense, SortedRNNEncoder, RNNFixedOuput, RNN_Self_Attention, \
     Dense_Self_Attention
 from model.siamese import CategoricalEncoder, WordMean
-from util.data_util import createCategoricalPreprocessorAndLexicons
-from util.torch_util import loadActivationFunction, loadActivationClass
+from data_util import createCategoricalPreprocessorAndLexicons
+from torch_util import loadActivationFunction, loadActivationClass
 
 
 def load_embedding(opts, paddingSym):
