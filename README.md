@@ -3,20 +3,20 @@ This is a reproduction project of paper - "A Soft Alignment Model for Bug Dedupl
 
 ##  Metadata 
 
-A reproduction of a following Mining Software Repository(MSR) research paper as part of the MSR course 2020/21 at UniKo, CS department, SoftLang Team: "A Soft Alignment Model for Bug Deduplication"[1][2] by Irving Muller Rodrigues, Daniel Aloise, Eraldo Rezende Fernandes and Michel Dagenais. The Code[4] & Dataset[3] were licensed by research paper authors.This project is licensed under MIT.
+A reproduction of a following Mining Software Repository(MSR) research paper as part of the MSR course 2020/21 at UniKo, CS department, SoftLang Team: **"A Soft Alignment Model for Bug Deduplication"**[1](https://dblp.org/rec/conf/msr/RodriguesAFD20.html?view=bibtex)[2]https://2020.msrconf.org/details/msr-2020-papers/31/A-Soft-Alignment-Model-for-Bug-Deduplication by Irving Muller Rodrigues, Daniel Aloise, Eraldo Rezende Fernandes and Michel Dagenais. The Code[4](https://github.com/irving-muller/soft_alignment_model_bug_deduplication) & Dataset[3](https://zenodo.org/record/3922012#.YBUloehKhnI) were licensed under MIT by research paper authors.
 
 ## Requirements 
 
 - Hardware
     - Minimum Requirements:  
         - **OS**: Windows / Linux
-        - **Processor**: Intel Core i5-3570K 3.4GHz / AMD FX-8310
+        - **Processor**: Intel Core i5-3570K 3.4GHz
         - **Memory**: 4 GB RAM
         - **Storage**: 70 GB Hard drive space
 
     - **Recommended Requirements**:  
         - **OS**: Windows / Linux
-        - **Processor**:  Intel Core i7-4790 4-Core 3.6GHz / AMD Ryzen 3 3200G
+        - **Processor**:  Intel Core i7-4790 4-Core 3.6GHz
         - **Memory**: 8/16 GB RAM
         - **Storage**: 70 GB **SSD** space
         - **GPU** : NVIDIA GPUs G8x version onwards
