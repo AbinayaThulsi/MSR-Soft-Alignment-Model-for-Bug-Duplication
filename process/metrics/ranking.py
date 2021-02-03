@@ -21,12 +21,12 @@ from sklearn.metrics.pairwise import cosine_similarity
 from torch.utils.data import DataLoader
 
 from data.preprocessing import concatenateSummaryAndDescription
-from util.data_util import readDateFromBug, createChunks
+from data_util import readDateFromBug, createChunks
 from time import time
 
 try:
     # Try to import torch modules. When we try to import torch library in the server without any gpu, we receive an error.
-    from util.torch_util import padSequences
+    from torch_util import padSequences
     import torch
     import torch.nn.functional as F
 except:
