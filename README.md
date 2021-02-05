@@ -1,11 +1,11 @@
 # MSR-Soft-Alignment-Model-for-Bug-Duplication
 This is a reproduction project of paper - "A Soft Alignment Model for Bug Deduplication". The paper aims at the state-of-art development of a novel soft alignment method which helps to identify the distinct bug reports for the same bug registered by multiple users. A novel deep learning model named SABD is implemented to achieve this. Further, the results are evaluated based on the rank-based metric.
 
-##  Metadata 
+#  Metadata 
 
 A reproduction of a following Mining Software Repository(MSR) research paper as part of the MSR course 2020/21 at UniKo, CS department, SoftLang Team: **"A Soft Alignment Model for Bug Deduplication"**[[1]](https://dblp.org/rec/conf/msr/RodriguesAFD20.html?view=bibtex)[[2]](https://2020.msrconf.org/details/msr-2020-papers/31/A-Soft-Alignment-Model-for-Bug-Deduplication) by Irving Muller Rodrigues, Daniel Aloise, Eraldo Rezende Fernandes and Michel Dagenais. The Code[[4]](https://github.com/irving-muller/soft_alignment_model_bug_deduplication) & Dataset[[3]](https://zenodo.org/record/3922012#.YBUloehKhnI) were licensed under MIT by research paper authors.
 
-## Requirements 
+# Requirements 
 
 - Hardware
     - Minimum Requirements:  
@@ -25,8 +25,9 @@ A reproduction of a following Mining Software Repository(MSR) research paper as 
     - Python, Pytorch, nltk, scipy, ujson, pytorch ignite 0.1.2, sacred, MongoDB
 
 
+# Process
 
-## Install
+## Package Installation
 Install the following packages:
 
 ```bash
@@ -47,8 +48,7 @@ Otherwise, run the below command to install all the Packages.
 pip install -r requirements.txt
 ```
 
-## Data
-## Data Fetching
+## Data Extraction
 The sample of the data is present in data/HOME_DIR folder. The complete data can be found [here](https://zenodo.org/record/3922012#.YBUloehKhnI) .
 
 But the data can also be fetched by the below process:
@@ -127,10 +127,8 @@ python3 data/create_dataset_our_methodology.py --database openOffice --collectio
 
 python3 data/clean_data.py --bug_dataset DATASET_DIR/open_office_2001-2008_2010/open_office_initial.json --output DATASET_DIR/open_office_2001-2008_2010/open_office_soft_clean_rm_punc_sent_tok.txt.json --fields short_desc description --type soft --rm_punc --sent_tok --lower_case
 ```
-
-
-    
-## Usage
+   
+# Usage
 
 In order to train SABD, a json have to be created with the argument values of SABD. 
 
@@ -144,10 +142,17 @@ python3 data/sabd.py -F HOME_DIR/experiments with HOME_DIR/duplicate-bug-report/
 python3 data/sabd.py -F HOME_DIR/experiments with HOME_DIR/duplicate-bug-report/json_parameters/sabd_netbeans_test.json "recall_rate.window=365"
 python3 data/sabd.py -F HOME_DIR/experiments with HOME_DIR/duplicate-bug-report/json_parameters/sabd_mozilla_test.json "recall_rate.window=365"
 ```
+# Data
 
-## Delta
+## Input Data
+Soft Alignment Model for Bug Deduplication (SABD) receives a pair of bug reports that has been taken from all open sources as the input. We get the input data from the data extraction phrase.
 
-## Process Delta: 
+## Output Data
+Soft Alignment Model for Bug Deduplication (SABD) produces the ranking rate / recall rate (RR@K) as the output. This is been calculated for each open source at k= 1 to 20, where k is the list of bug reports recommended by the triager.  Therefore, with the help of Time Window for a period of 1 to 3 years the data is being compared.
+
+# Delta
+
+## Process Delta 
 ```bash
 1. We were able to fetch the data using the commands provided with few minor changes in the code
 (e.g.Changing the path). The data was fetched to mongodb and then to local system.
@@ -155,7 +160,7 @@ python3 data/sabd.py -F HOME_DIR/experiments with HOME_DIR/duplicate-bug-report/
 3. During analysis sabd.py program had to be modified to run for the CPU instead of GPU. As we did not 
 have the version of GPU needed to run the code for the dataset provided.
 ```
-## Data Delta:
+## Data Delta
 ```bash
 1. When we ran the code with CPU instead of GPU, the code ran for about 20 hours without any others as the 
 size of dataset was huge. So we manually took the sample of data for one of the open source (eclipse) and 
@@ -169,7 +174,7 @@ ranking rates were fetched by the author of the paper. All the ranking rates wer
 article_results.ipynb code. As mentioned in 3rd point we were not able to compare because of the GPU 
 constraint.
 ```
-## Results:
+## Results
 
 Soft Alignment Model for Bug Deduplication (SABD) receives a pair of bug reports that has been taken from all open sources and produces the ranking rate / recall rate (RR@K) as the output. This is been calculated for each open source at k= 1 to 20, where k is the list of bug reports recommended by the triager.  Therefore, with the help of Time Window for a period of 1 to 3 years the data is being compared.
 
@@ -177,7 +182,7 @@ Since we had to use a small data of about 600 records the recall rate becomes 1 
 
 ![](Image/recall_rate.PNG)
 
-## Executability:
+## Executability
 ```bash
 1. During data fetch phrase we did not face much issues, MongoDB was required and a few minor changes had 
 to be done. Data preprocessing went smoothly.
