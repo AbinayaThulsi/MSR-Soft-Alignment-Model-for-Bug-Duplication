@@ -57,7 +57,7 @@ pip install -r requirements.txt
 ## Step 2: Data Extraction
 The complete data can be found [here](https://zenodo.org/record/3922012#.YBUloehKhnI) .
 
-But the data can also be fetched by the below process:
+The data can also be fetched by the below process:
 
 The data used in the paper can be found [here](https://zenodo.org/record/3922012). One folder contain the word embeddings and four remaining ones 
 contain the dataset of the open-sources projects (Eclipse, Netbeans, Open Office and Firefox).
@@ -163,42 +163,26 @@ python3 data/sabd.py -F HOME_DIR/experiments with HOME_DIR/duplicate-bug-report/
 # Delta
 
 ## Process Delta 
-1. We were able to fetch the data using the commands provided with few minor changes in the code
-(e.g.Changing the path). The data was fetched to mongodb and then to local system.
+1. We were able to fetch the data using the commands provided with few minor changes in the code(e.g.Changing the path). The data was fetched to mongodb and then to local system.
 2. Data preprocessing also worked fine (cleaning data, creating pairs etc). 
-3. During analysis sabd.py program had to be modified to run for the CPU instead of GPU. As we did not 
-have the version of GPU needed to run the code for the dataset provided.
+3. During analysis sabd.py program had to be modified to run for the CPU instead of GPU. As we did not have the version of GPU needed to run the code for the dataset provided.
 
 ## Data Delta
-1. When we ran the code with CPU instead of GPU, the code ran for about 20 hours without any others as the 
-size of dataset was huge. So we manually took the sample of data for one of the open source (eclipse) and 
-preprocessed data using clean_data, generate_pairs_triplets, generate_categorical_lexicon. 
-2. We ran the sabd.py code for 1 year and 3 years window and we got the final output. i.e, ranking rate 
-for k 1 to 20.
-3. Since we could only run for sample data we could not compare the results with other open sources or with 
-other methodologies. 
-4. The code article_results.ipynb gives the comparison for all open sources and other methodologies. These 
-ranking rates were fetched by the author of the paper. All the ranking rates were fetched as a list in 
-article_results.ipynb code. As mentioned in 3rd point we were not able to compare because of the GPU 
-constraint.
+1. When we ran the code with CPU instead of GPU, the code ran for about 20 hours without any others as the size of dataset was huge. So we manually took the sample of data for one of the open source (eclipse) and preprocessed data using clean_data, generate_pairs_triplets, generate_categorical_lexicon. 
+2. We ran the sabd.py code for 1 year and 3 years window and we got the final output. i.e, ranking rate for k 1 to 20.
+3. Since we could only run for sample data we could not compare the results with other open sources or with other methodologies. 
+4. The code article_results.ipynb gives the comparison for all open sources and other methodologies. These ranking rates were fetched by the author of the paper. All the ranking rates were fetched as a list in article_results.ipynb code. As mentioned in 3rd point we were not able to compare because of the GPU constraint.
 
 ## Results
 
-Soft Alignment Model for Bug Deduplication (SABD) receives a pair of bug reports that has been taken from all open sources and produces the ranking rate / recall rate (RR@K) as the output. This is been calculated for each open source at k= 1 to 20, where k is the list of bug reports recommended by the triager.  Therefore, with the help of Time Window for a period of 1 to 3 years the data is being compared.
-
+The attached screenshot is thefinal results which we have achieved.
 Since we had to use a small data of about 600 records the recall rate becomes 1 from k=3 onwards. So, we ran only for the Eclipse as it would be the same case for other open sources because of data constraint.
 
 ![](Image/recall_rate.PNG)
 
 ## Executability
-1. During data fetch phrase we did not face much issues, MongoDB was required and a few minor changes had 
-to be done. Data preprocessing went smoothly.
-2. The major issue was while running sabd.py which took us a few days to figure out the exact issue which 
-was related to compatibility and version. We were getting GPU issue (Error: No HIP GPU available) which we 
-resolved by downloading drivers. But, the versions were not matching so NVIDIA failed to communicate with 
-the driver (Error : No Nvidia driver in your system).
-3. To overcome GPU issue, we tried to run the code with only CPU. But the code was running for epoch:1 for 
-about 20 hours. 
+1. During data fetch phrase we did not face much issues, MongoDB was required and a few minor changes had to be done. Data preprocessing went smoothly.
+2. The major issue was while running sabd.py which took us a few days to figure out the exact issue which was related to compatibility and version. We were getting GPU issue (Error: No HIP GPU available) which we resolved by downloading drivers. But, the versions were not matching so NVIDIA failed to communicate with the driver (Error : No Nvidia driver in your system).
+3. To overcome GPU issue, we tried to run the code with only CPU. But the code was running for epoch:1 for about 20 hours. 
 4. We tried running for 10000 records but after 1 hour the code was still at epoch 1.
-5. So we decided to run the code by taking around 500-600 records and were able to receive recall-rate 
-within 10 mins. The sample data we have provided for eclipse has around 600 records. 
+5. So we decided to run the code by taking around 500-600 records and were able to receive recall-rate within 10 mins. The sample data we have provided for eclipse has around 600 records. 
