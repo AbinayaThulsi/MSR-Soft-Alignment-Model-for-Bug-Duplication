@@ -165,7 +165,7 @@ python3 data/sabd.py -F HOME_DIR/experiments with HOME_DIR/duplicate-bug-report/
 The attached screenshot is thefinal results which we have achieved.
 Since we had to use a small data of about 600 records the recall rate becomes 1 from k=3 onwards. So, we ran only for the Eclipse as it would be the same case for other open sources because of data constraint.
 
-![](Image/recall_rate.PNG)
+![](Image/recall_rat.PNG)
 
 # Delta
 
