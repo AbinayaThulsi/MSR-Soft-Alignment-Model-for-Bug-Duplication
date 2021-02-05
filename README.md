@@ -3,7 +3,13 @@ This is a reproduction project of paper - "A Soft Alignment Model for Bug Dedupl
 
 #  Metadata 
 
-A reproduction of a following Mining Software Repository(MSR) research paper as part of the MSR course 2020/21 at UniKo, CS department, SoftLang Team: **"A Soft Alignment Model for Bug Deduplication"**[[1]](https://dblp.org/rec/conf/msr/RodriguesAFD20.html?view=bibtex)[[2]](https://2020.msrconf.org/details/msr-2020-papers/31/A-Soft-Alignment-Model-for-Bug-Deduplication) by Irving Muller Rodrigues, Daniel Aloise, Eraldo Rezende Fernandes and Michel Dagenais. The Code[[4]](https://github.com/irving-muller/soft_alignment_model_bug_deduplication) & Dataset[[3]](https://zenodo.org/record/3922012#.YBUloehKhnI) were licensed under MIT by research paper authors.
+A reproduction as part of the MSR course at MSR couse 2020/21 at UniKo, CS department, SoftLang Team.
+
+**Paper Title**: "A Soft Alignment Model for Bug Deduplication" by the authors Irving Muller Rodrigues, Daniel Aloise, Eraldo Rezende Fernandes and Michel Dagenais.
+
+**DBLP Link:** https://dblp.org/rec/conf/msr/RodriguesAFD20.html?view=bibtex (https://2020.msrconf.org/details/msr-2020-papers/31/A-Soft-Alignment-Model-for-Bug-Deduplication)
+
+The [Code](https://github.com/irving-muller/soft_alignment_model_bug_deduplication) & [Dataset](https://zenodo.org/record/3922012#.YBUloehKhnI) of the paper can be found here.
 
 # Requirements 
 
@@ -27,7 +33,7 @@ A reproduction of a following Mining Software Repository(MSR) research paper as 
 
 # Process
 
-## Package Installation
+## Step 1: Package Installation
 Install the following packages:
 
 ```bash
@@ -48,8 +54,8 @@ Otherwise, run the below command to install all the Packages.
 pip install -r requirements.txt
 ```
 
-## Data Extraction
-The sample of the data is present in data/HOME_DIR folder. The complete data can be found [here](https://zenodo.org/record/3922012#.YBUloehKhnI) .
+## Step 2: Data Extraction
+The complete data can be found [here](https://zenodo.org/record/3922012#.YBUloehKhnI) .
 
 But the data can also be fetched by the below process:
 
@@ -90,7 +96,7 @@ The original dataset is available [here](http://alazar.people.ysu.edu/msr14data/
 > Note: Lazar's dataset has to be dumped into mongo before running these commands
 
 
-## Data Preprocessing
+## Step 3: Data Preprocessing
 
 > Note: The code has been completely automated for **Ecliple**. After running the command under eclipse, we can directly run the SABD code under **Usage**.
 
@@ -145,23 +151,25 @@ python3 data/sabd.py -F HOME_DIR/experiments with HOME_DIR/duplicate-bug-report/
 # Data
 
 ## Input Data
-Soft Alignment Model for Bug Deduplication (SABD) receives a pair of bug reports that has been taken from all open sources as the input. We get the input data from the data extraction phrase.
+- The Bug report is collected from four open source projects(Eclipse, Mozilla, NetBeans and OpenOffice). 
+- Soft Alignment Model for Bug Deduplication (SABD) model receives the bug reports as the input which is composed of the categorical fields, a summary and a description. 
+- We get the input data from the data extraction phrase. The sample data is present [here](https://github.com/AbinayaThulsi/MSR-Soft-Alignment-Model-for-Bug-Duplication/tree/main/data/HOME_DIR/dataset/sun_2011/eclipse_2001-2007_2008).
 
 ## Output Data
-Soft Alignment Model for Bug Deduplication (SABD) produces the ranking rate / recall rate (RR@K) as the output. This is been calculated for each open source at k= 1 to 20, where k is the list of bug reports recommended by the triager.  Therefore, with the help of Time Window for a period of 1 to 3 years the data is being compared.
+- Soft Alignment Model for Bug Deduplication (SABD) model outputs the probability of the bug report being a duplicate and indicates whether the given reports are duplicate. 
+- The output is evaluated using ranking-based metrics and recall rate (RR@k). This is been calculated for each open source at k= 1 to 20, where k is the list of bug reports recommended by the triager. Therefore, with the help of Time Window for a period of 1 to 3 years the data is being compared.
+- The output of our sample data can be found [here](https://github.com/AbinayaThulsi/MSR-Soft-Alignment-Model-for-Bug-Duplication/tree/main/process/Ouput_Sample_data).
 
 # Delta
 
 ## Process Delta 
-```bash
 1. We were able to fetch the data using the commands provided with few minor changes in the code
 (e.g.Changing the path). The data was fetched to mongodb and then to local system.
 2. Data preprocessing also worked fine (cleaning data, creating pairs etc). 
 3. During analysis sabd.py program had to be modified to run for the CPU instead of GPU. As we did not 
 have the version of GPU needed to run the code for the dataset provided.
-```
+
 ## Data Delta
-```bash
 1. When we ran the code with CPU instead of GPU, the code ran for about 20 hours without any others as the 
 size of dataset was huge. So we manually took the sample of data for one of the open source (eclipse) and 
 preprocessed data using clean_data, generate_pairs_triplets, generate_categorical_lexicon. 
@@ -173,7 +181,7 @@ other methodologies.
 ranking rates were fetched by the author of the paper. All the ranking rates were fetched as a list in 
 article_results.ipynb code. As mentioned in 3rd point we were not able to compare because of the GPU 
 constraint.
-```
+
 ## Results
 
 Soft Alignment Model for Bug Deduplication (SABD) receives a pair of bug reports that has been taken from all open sources and produces the ranking rate / recall rate (RR@K) as the output. This is been calculated for each open source at k= 1 to 20, where k is the list of bug reports recommended by the triager.  Therefore, with the help of Time Window for a period of 1 to 3 years the data is being compared.
@@ -183,7 +191,6 @@ Since we had to use a small data of about 600 records the recall rate becomes 1 
 ![](Image/recall_rate.PNG)
 
 ## Executability
-```bash
 1. During data fetch phrase we did not face much issues, MongoDB was required and a few minor changes had 
 to be done. Data preprocessing went smoothly.
 2. The major issue was while running sabd.py which took us a few days to figure out the exact issue which 
@@ -195,11 +202,3 @@ about 20 hours.
 4. We tried running for 10000 records but after 1 hour the code was still at epoch 1.
 5. So we decided to run the code by taking around 500-600 records and were able to receive recall-rate 
 within 10 mins. The sample data we have provided for eclipse has around 600 records. 
-```
-
-## References
-
-1. [DBLP](https://dblp.org/rec/conf/msr/RodriguesAFD20.html?view=bibtex)
-2. https://2020.msrconf.org/details/msr-2020-papers/31/A-Soft-Alignment-Model-for-Bug-Deduplication
-3. [Dataset](https://zenodo.org/record/3922012#.YBUloehKhnI)
-4. [Code](https://github.com/irving-muller/soft_alignment_model_bug_deduplication)
