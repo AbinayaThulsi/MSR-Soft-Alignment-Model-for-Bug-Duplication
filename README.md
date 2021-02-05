@@ -171,13 +171,13 @@ ranking rates were fetched by the author of the paper. All the ranking rates wer
 article_results.ipynb code. As mentioned in 3rd point we were not able to compare because of the GPU 
 constraint.
 ```
-## Results:##
+## Results:
 
 Soft Alignment Model for Bug Deduplication (SABD) receives a pair of bug reports that has been taken from all open sources and produces the ranking rate / recall rate (RR@K) as the output. This is been calculated for each open source at k= 1 to 20, where k is the list of bug reports recommended by the triager.  Therefore, with the help of Time Window for a period of 1 to 3 years the data is being compared.
 
 Since we had to use a small data of about 600 records the recall rate becomes 1 from k=3 onwards. So, we ran only for the Eclipse as it would be the same case for other open sources because of data constraint.
 
-![](Images/recall_rate.PNG)
+![](Image/recall_rate.PNG)
 
 ## Executability:
 ```bash
