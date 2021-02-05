@@ -176,7 +176,7 @@ Since we had to use a small data of about 600 records the recall rate becomes 1 
 - During analysis sabd.py program had to be modified to run for the CPU instead of GPU. As we did not have the version of GPU needed to run the code for the dataset provided.
 
 ## Data Delta
-- When we ran the code with CPU instead of GPU, the code ran for about 20 hours without any others as the size of dataset was huge. So we manually took the sample of data for one of the open source (eclipse) and preprocessed data using clean_data, generate_pairs_triplets, generate_categorical_lexicon. 
+- When we ran the code with CPU instead of GPU, the code ran for about 20 hours without any outputs as the size of dataset was huge. So we manually took the sample of data for one of the open source (eclipse) and preprocessed data using clean_data, generate_pairs_triplets, generate_categorical_lexicon. 
 - We ran the sabd.py code for 1 year and 3 years window and we got the final output. i.e, ranking rate for k 1 to 20.
 - Since we could only run for sample data we could not compare the results with other open sources or with other methodologies. 
 - The code article_results.ipynb gives the comparison for all open sources and other methodologies. These ranking rates were fetched by the author of the paper. All the ranking rates were fetched as a list in article_results.ipynb code. As mentioned in 3rd point we were not able to compare because of the GPU constraint.
