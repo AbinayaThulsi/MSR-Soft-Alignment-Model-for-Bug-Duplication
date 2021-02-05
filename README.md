@@ -151,13 +151,13 @@ python3 data/sabd.py -F HOME_DIR/experiments with HOME_DIR/duplicate-bug-report/
 # Data
 
 ## Input Data
-- The Bug report is collected from four open source projects(Eclipse, Mozilla, NetBeans and OpenOffice). 
+- The Bug report is collected from four open source projects (Eclipse, Mozilla, NetBeans and Open Office). 
 - Soft Alignment Model for Bug Deduplication (SABD) model receives the bug reports as the input which is composed of the categorical fields, a summary and a description. 
 - We get the input data from the data extraction phrase. The sample data is present [here](https://github.com/AbinayaThulsi/MSR-Soft-Alignment-Model-for-Bug-Duplication/tree/main/data/HOME_DIR/dataset/sun_2011/eclipse_2001-2007_2008).
 
 ## Output Data
 - Soft Alignment Model for Bug Deduplication (SABD) model outputs the probability of the bug report being a duplicate and indicates whether the given reports are duplicate. 
-- The output is evaluated using ranking-based metrics and recall rate (RR@k). This is been calculated for each open source at k= 1 to 20, where k is the list of bug reports recommended by the triager. Therefore, with the help of Time Window for a period of 1 to 3 years the data is being compared.
+- The output is evaluated using two metrics i.e. mean average precision (MAP, a ranking based metric) and recall rate@k (RR@k). This is been calculated for each open source at k= 1 to 20, where k is the list of bug reports recommended by the triager. Therefore, with the help of Time Window for a period of 1 to 3 years the data is being compared.
 - The output of our sample data can be found [here](https://github.com/AbinayaThulsi/MSR-Soft-Alignment-Model-for-Bug-Duplication/tree/main/process/Ouput_Sample_data).
 
 # Results
@@ -170,14 +170,14 @@ Since we had to use a small data of about 600 records the recall rate becomes 1 
 # Delta
 
 ## Process Delta 
-- We were able to fetch the data using the commands provided with few minor changes in the code(e.g.Changing the path). The data was fetched to mongodb and then to local system.
+- We were able to fetch the data using the commands provided with few minor changes in the code (e.g.Changing the path). The data was fetched to mongodb and then to local system.
 - Data preprocessing also worked fine (cleaning data, creating pairs etc). 
 - The method was tested with a time window of one year and three years to measure how its size affects performance.
 - During analysis sabd.py program had to be modified to run for the CPU instead of GPU. As we did not have the version of GPU needed to run the code for the dataset provided.
 
 ## Data Delta
 - When we ran the code with CPU instead of GPU, the code ran for about 20 hours without any outputs as the size of dataset was huge. So we manually took the sample of data for one of the open source (eclipse) and preprocessed data using clean_data, generate_pairs_triplets, generate_categorical_lexicon. 
-- We ran the sabd.py code for 1 year and 3 years window and we got the final output. i.e, ranking rate for k 1 to 20.
+- We ran the sabd.py code for 1 year and 3 years window and we got the final output. i.e, ranking rate for k 1 to 20 and the value of MAP.
 - Since we could only run for sample data we could not compare the results with other open sources or with other methodologies. 
 - The code article_results.ipynb gives the comparison for all open sources and other methodologies. These ranking rates were fetched by the author of the paper. All the ranking rates were fetched as a list in article_results.ipynb code. As mentioned in 3rd point we were not able to compare because of the GPU constraint.
 
