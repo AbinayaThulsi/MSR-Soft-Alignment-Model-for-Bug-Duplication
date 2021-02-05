@@ -170,15 +170,16 @@ Since we had to use a small data of about 600 records the recall rate becomes 1 
 # Delta
 
 ## Process Delta 
-1. We were able to fetch the data using the commands provided with few minor changes in the code(e.g.Changing the path). The data was fetched to mongodb and then to local system.
-2. Data preprocessing also worked fine (cleaning data, creating pairs etc). 
-3. During analysis sabd.py program had to be modified to run for the CPU instead of GPU. As we did not have the version of GPU needed to run the code for the dataset provided.
+- We were able to fetch the data using the commands provided with few minor changes in the code(e.g.Changing the path). The data was fetched to mongodb and then to local system.
+- Data preprocessing also worked fine (cleaning data, creating pairs etc). 
+- The method was tested with a time window of one year and three years to measure how its size affects performance.
+- During analysis sabd.py program had to be modified to run for the CPU instead of GPU. As we did not have the version of GPU needed to run the code for the dataset provided.
 
 ## Data Delta
-1. When we ran the code with CPU instead of GPU, the code ran for about 20 hours without any others as the size of dataset was huge. So we manually took the sample of data for one of the open source (eclipse) and preprocessed data using clean_data, generate_pairs_triplets, generate_categorical_lexicon. 
-2. We ran the sabd.py code for 1 year and 3 years window and we got the final output. i.e, ranking rate for k 1 to 20.
-3. Since we could only run for sample data we could not compare the results with other open sources or with other methodologies. 
-4. The code article_results.ipynb gives the comparison for all open sources and other methodologies. These ranking rates were fetched by the author of the paper. All the ranking rates were fetched as a list in article_results.ipynb code. As mentioned in 3rd point we were not able to compare because of the GPU constraint.
+- When we ran the code with CPU instead of GPU, the code ran for about 20 hours without any others as the size of dataset was huge. So we manually took the sample of data for one of the open source (eclipse) and preprocessed data using clean_data, generate_pairs_triplets, generate_categorical_lexicon. 
+- We ran the sabd.py code for 1 year and 3 years window and we got the final output. i.e, ranking rate for k 1 to 20.
+- Since we could only run for sample data we could not compare the results with other open sources or with other methodologies. 
+- The code article_results.ipynb gives the comparison for all open sources and other methodologies. These ranking rates were fetched by the author of the paper. All the ranking rates were fetched as a list in article_results.ipynb code. As mentioned in 3rd point we were not able to compare because of the GPU constraint.
 
 # Executability
 1. During data fetch phrase we did not face much issues, MongoDB was required and a few minor changes had to be done. Data preprocessing went smoothly.
