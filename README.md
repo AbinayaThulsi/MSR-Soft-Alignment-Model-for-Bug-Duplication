@@ -165,7 +165,7 @@ python3 data/sabd.py -F HOME_DIR/experiments with HOME_DIR/duplicate-bug-report/
 The attached screenshot is thefinal results which we have achieved.
 Since we had to use a small data of about 600 records the recall rate becomes 1 from k=3 onwards. So, we ran only for the Eclipse as it would be the same case for other open sources because of data constraint.
 
-![](Image/recall_rat.PNG)
+![](Image/recall_rate_MAP.PNG)
 
 # Delta
 
@@ -181,7 +181,7 @@ Since we had to use a small data of about 600 records the recall rate becomes 1 
 - Since we could only run for sample data we could not compare the results with other open sources or with other methodologies. 
 - The code article_results.ipynb gives the comparison for all open sources and other methodologies. These ranking rates were fetched by the author of the paper. All the ranking rates were fetched as a list in article_results.ipynb code. As mentioned in 3rd point we were not able to compare because of the GPU constraint.
 
-# Problems Faced
+## Problems Faced
 - During data fetch phrase we did not face much issues, MongoDB was required and a few minor changes had to be done. Data preprocessing went smoothly.
 - The major issue was while running sabd.py which took us a few days to figure out the exact issue which was related to compatibility and version. We were getting GPU issue (Error: No HIP GPU available) which we resolved by downloading drivers. But, the versions were not matching so NVIDIA failed to communicate with the driver (Error : No Nvidia driver in your system).
 - To overcome GPU issue, we tried to run the code with only CPU. But the code was running for epoch:1 for about 20 hours. 
