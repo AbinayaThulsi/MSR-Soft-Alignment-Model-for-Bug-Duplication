@@ -160,6 +160,13 @@ python3 data/sabd.py -F HOME_DIR/experiments with HOME_DIR/duplicate-bug-report/
 - The output is evaluated using ranking-based metrics and recall rate (RR@k). This is been calculated for each open source at k= 1 to 20, where k is the list of bug reports recommended by the triager. Therefore, with the help of Time Window for a period of 1 to 3 years the data is being compared.
 - The output of our sample data can be found [here](https://github.com/AbinayaThulsi/MSR-Soft-Alignment-Model-for-Bug-Duplication/tree/main/process/Ouput_Sample_data).
 
+# Results
+
+The attached screenshot is thefinal results which we have achieved.
+Since we had to use a small data of about 600 records the recall rate becomes 1 from k=3 onwards. So, we ran only for the Eclipse as it would be the same case for other open sources because of data constraint.
+
+![](Image/recall_rate.PNG)
+
 # Delta
 
 ## Process Delta 
@@ -172,13 +179,6 @@ python3 data/sabd.py -F HOME_DIR/experiments with HOME_DIR/duplicate-bug-report/
 2. We ran the sabd.py code for 1 year and 3 years window and we got the final output. i.e, ranking rate for k 1 to 20.
 3. Since we could only run for sample data we could not compare the results with other open sources or with other methodologies. 
 4. The code article_results.ipynb gives the comparison for all open sources and other methodologies. These ranking rates were fetched by the author of the paper. All the ranking rates were fetched as a list in article_results.ipynb code. As mentioned in 3rd point we were not able to compare because of the GPU constraint.
-
-# Results
-
-The attached screenshot is thefinal results which we have achieved.
-Since we had to use a small data of about 600 records the recall rate becomes 1 from k=3 onwards. So, we ran only for the Eclipse as it would be the same case for other open sources because of data constraint.
-
-![](Image/recall_rate.PNG)
 
 # Executability
 1. During data fetch phrase we did not face much issues, MongoDB was required and a few minor changes had to be done. Data preprocessing went smoothly.
