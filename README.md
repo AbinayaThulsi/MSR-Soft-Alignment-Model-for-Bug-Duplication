@@ -181,9 +181,9 @@ Since we had to use a small data of about 600 records the recall rate becomes 1 
 - Since we could only run for sample data we could not compare the results with other open sources or with other methodologies. 
 - The code article_results.ipynb gives the comparison for all open sources and other methodologies. These ranking rates were fetched by the author of the paper. All the ranking rates were fetched as a list in article_results.ipynb code. As mentioned in 3rd point we were not able to compare because of the GPU constraint.
 
-# Executability
-1. During data fetch phrase we did not face much issues, MongoDB was required and a few minor changes had to be done. Data preprocessing went smoothly.
-2. The major issue was while running sabd.py which took us a few days to figure out the exact issue which was related to compatibility and version. We were getting GPU issue (Error: No HIP GPU available) which we resolved by downloading drivers. But, the versions were not matching so NVIDIA failed to communicate with the driver (Error : No Nvidia driver in your system).
-3. To overcome GPU issue, we tried to run the code with only CPU. But the code was running for epoch:1 for about 20 hours. 
-4. We tried running for 10000 records but after 1 hour the code was still at epoch 1.
-5. So we decided to run the code by taking around 500-600 records and were able to receive recall-rate within 10 mins. The sample data we have provided for eclipse has around 600 records. 
+# Problems Faced
+- During data fetch phrase we did not face much issues, MongoDB was required and a few minor changes had to be done. Data preprocessing went smoothly.
+- The major issue was while running sabd.py which took us a few days to figure out the exact issue which was related to compatibility and version. We were getting GPU issue (Error: No HIP GPU available) which we resolved by downloading drivers. But, the versions were not matching so NVIDIA failed to communicate with the driver (Error : No Nvidia driver in your system).
+- To overcome GPU issue, we tried to run the code with only CPU. But the code was running for epoch:1 for about 20 hours. 
+- We tried running for 10000 records but after 1 hour the code was still at epoch 1.
+- So we decided to run the code by taking around 500-600 records and were able to receive recall-rate within 10 mins. The sample data we have provided for eclipse has around 600 records. 
