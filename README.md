@@ -159,7 +159,7 @@ have the version of GPU needed to run the code for the dataset provided.
 ```
 ## Data Delta:
 ```bash
-1. When we ran the code with CPU instead if GPU, the code ran for about 20 hours without any others as the 
+1. When we ran the code with CPU instead of GPU, the code ran for about 20 hours without any others as the 
 size of dataset was huge. So we manually took the sample of data for one of the open source (eclipse) and 
 preprocessed data using clean_data, generate_pairs_triplets, generate_categorical_lexicon. 
 2. We ran the sabd.py code for 1 year and 3 years window and we got the final output. i.e, ranking rate 
