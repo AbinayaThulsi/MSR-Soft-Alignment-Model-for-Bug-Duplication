@@ -26,8 +26,6 @@ A reproduction of a following Mining Software Repository(MSR) research paper as 
 
 
 
-## Data
-
 ## Install
 Install the following packages:
 
@@ -49,7 +47,7 @@ Otherwise, run the below command to install all the Packages.
 pip install -r requirements.txt
 ```
 
-
+## Data
 ## Data Fetching
 The sample of the data is present in data/HOME_DIR folder. The complete data can be found [here](https://zenodo.org/record/3922012#.YBUloehKhnI) .
 
