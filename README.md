@@ -63,7 +63,8 @@ The data used in the paper can be found [here](https://zenodo.org/record/3922012
 contain the dataset of the open-sources projects (Eclipse, Netbeans, Open Office and Firefox).
 This data came from the [Lazar's work](https://dl.acm.org/doi/abs/10.1145/2597073.2597128  ).
 The original dataset is available [here](http://alazar.people.ysu.edu/msr14data/ ).
-During data extraction mongodb is required to get the data from Lazar's work(this uses mongo data base to store and extract the data). We use this data and process it.
+
+During data extraction mongodb is required to get the data from Lazar's work(this work uses mongo data base to store and extract the data). We use the obtained data and process it.
 
 ```bash
  wget http://alazar.people.ysu.edu/msr14data/datasets/eclipse.tar.gz
